@@ -15,5 +15,11 @@ import { CommonModule } from '@angular/common';
 
 export class AppComponent {
   condition = true;
+  text=""
   title = 'SINTEDIA_ANGULAR';
 }
+
+/*handleClick(){
+  this.text = "Benvinguts a SINTEDIA"
+}*/
+

@@ -1,0 +1,38 @@
+h1 {
+    color: #FFF7D1;
+}
+.destacar {
+    color: #ff3355;
+}
+
+body {
+    color: #ffffff;
+    background-color: #1F1F1F;
+    border: 1px solid ;
+}
+
+#h1 {
+    display:flex;
+}
+
+#boton1 {
+    color: #FFF7D1;
+    background-color: #1F1F1F;
+    margin-left: 1200px;
+    padding-block:  10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15%;
+    border: 3px solid #FFF7D1;
+}
+
+#boton2 {
+    color: #FFF7D1;
+    background-color: #1F1F1F;
+    margin-left: 10px;
+    padding-block:  10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15%;
+    border: 3px solid #FFF7D1;
+}
