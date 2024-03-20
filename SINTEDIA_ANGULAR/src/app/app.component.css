@@ -8,17 +8,17 @@ h1 {
 body {
     color: #ffffff;
     background-color: #1F1F1F;
-    border: 1px solid ;
 }
 
 #h1 {
     display:flex;
+    margin-top: -60px;
 }
 
 #boton1 {
     color: #FFF7D1;
     background-color: #1F1F1F;
-    margin-left: 1200px;
+    margin-left: 1275px;
     padding-block:  10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -36,3 +36,16 @@ body {
     border-radius: 15%;
     border: 3px solid #FFF7D1;
 }
+
+.bruno-ace-regular {
+    font-family: "Bruno Ace", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+}
+
+.hind-guntur-regular {
+    font-family: "Hind Guntur", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
