@@ -1,16 +1,16 @@
 
 <router-outlet></router-outlet>
-@if(title){
+<header>@if(title){
     <h1>{{title}}</h1>
-}
+    <div id="h1">
+        <button id="boton1" class="bruno-ace-regular">Registrarse</button>
+        <button id="boton2" class="bruno-ace-regular">Iniciar Sesión</button>
+    </div>
+}</header>
 <body>
     <div>Hola que tal <b>esteu</b>?</div>
     <div>Siusplau, seleccioneu el botó.</div>
     <!--<button (click)="handleClick()">Pulse aquí!</button>-->
-    <div id="h1">
-        <button id="boton1">Registrarse</button>
-        <button id="boton2">Iniciar Sesión</button>
-    </div>
     <h1>QUE TAL</h1>
     
 </body>
