@@ -37,6 +37,21 @@ body {
     border: 3px solid #FFF7D1;
 }
 
+#buscador {
+    background: linear-gradient(to right, #1F1F1F, #858585, 80%, #1F1F1F);
+    border: 3px, solid #ffffff;
+    border-radius: 15%;
+    max-width: 800px; /* Establece el ancho máximo del div */
+    margin-top: 100px;
+    margin: 0 auto; /* Centra el div horizontalmente */
+    padding: 1px;
+}
+
+#dos{
+    margin-top: 20px;
+    padding-right: 40%;
+}
+
 .bruno-ace-regular {
     font-family: "Bruno Ace", sans-serif;
     font-weight: 400;
