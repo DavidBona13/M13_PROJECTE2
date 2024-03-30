@@ -37,6 +37,10 @@ body {
     border: 3px solid #FFF7D1;
 }
 
+#columna {
+    border: 3px solid #FFF7D1;
+}
+
 #buscador {
     background: linear-gradient(to right, #1F1F1F, #858585, 80%, #1F1F1F);
     border: 3px, solid #ffffff;
@@ -64,3 +68,20 @@ body {
     font-style: normal;
 }
   
+.columna ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.columna ul li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid black; 
+}
+
+.columna ul li:last-child {
+    border-bottom: none; 
+}
+
+.submenu {
+    display: none; 
+}
