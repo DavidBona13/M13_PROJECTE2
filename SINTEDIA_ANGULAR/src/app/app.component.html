@@ -1,5 +1,4 @@
-
-<router-outlet></router-outlet>
+<!DOCTYPE html>
 <header>@if(title){
     <h1>{{title}}</h1>
     <div id="h1">
@@ -7,16 +6,30 @@
         <button id="boton2" class="bruno-ace-regular">Iniciar Sesión</button>
     </div>
     <div id="buscador">
-        <button></button>
         <button>Buscar</button>
     </div>
 }</header>
 <body>
-    <div id="dos">Hola que tal <b>esteu</b>?</div>
-    <div id="dos">Siusplau, seleccioneu el botó.</div>
-    <!--<button (click)="handleClick()">Pulse aquí!</button>-->
-    <h1 id="dos">QUE TAL</h1>
-    
+    <div class="columna">
+        <ul id="menu">
+            <li class="menu-item" (click)="toggleSubmenu($event)">Menu
+                <ul class="submenu" *ngIf="submenuOpen">
+                    <li><a href="#">Sintetizadores</a></li>
+                    <li><a href="#">Empresas</a></li>
+                    <li><a href="#">Música</a></li>
+                    <li><a href="#">Diseño Sonoro</a></li>
+                    <li><a href="#">Historia</a></li>
+                </ul>
+            </li>
+            <li class="menu-item" (click)="toggleSubmenu($event)">Listas</li>
+            <li class="menu-item" (click)="toggleSubmenu($event)">Crear</li>
+            <li class="menu-item" (click)="toggleSubmenu($event)">Sonidos</li>
+        </ul>
+    </div>
+
+    <script src="app.component.js"></script>
 </body>
 <!--<div [ngClass]="condition ? 'green' : 'red'">Hola</div>-->
 
+
+<router-outlet></router-outlet>
