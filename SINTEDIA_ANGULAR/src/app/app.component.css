@@ -75,7 +75,8 @@ body {
 
 .columna ul li {
     margin-bottom: 5px;
-    border-bottom: 1px solid black; 
+    border-bottom: 1px solid #FFF7D1; 
+    margin-right: 1465px;
 }
 
 .columna ul li:last-child {

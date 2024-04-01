@@ -13,7 +13,7 @@
     <div class="columna">
         <ul id="menu">
             <li class="menu-item" (click)="toggleSubmenu($event)">Menu
-                <ul class="submenu" *ngIf="submenuOpen">
+                <ul class="submenu" ngIf="submenuOpen">
                     <li><a href="#">Sintetizadores</a></li>
                     <li><a href="#">Empresas</a></li>
                     <li><a href="#">Música</a></li>
@@ -21,13 +21,13 @@
                     <li><a href="#">Historia</a></li>
                 </ul>
             </li>
-            <li class="menu-item" (click)="toggleSubmenu($event)">Listas</li>
+            <li class="menu-item"><a href="pagina-1.component.html">Listas</a></li>
             <li class="menu-item" (click)="toggleSubmenu($event)">Crear</li>
             <li class="menu-item" (click)="toggleSubmenu($event)">Sonidos</li>
         </ul>
     </div>
 
-    <script src="app.component.js"></script>
+    <!--<script src="app.component.ts"></script> -->
 </body>
 <!--<div [ngClass]="condition ? 'green' : 'red'">Hola</div>-->
 
