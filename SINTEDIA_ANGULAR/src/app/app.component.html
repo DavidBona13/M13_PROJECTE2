@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<header>@if(title){
+<header class="headerDalt">@if(title){
     <h1>{{title}}</h1>
     <div id="h1">
         <button id="boton1" class="bruno-ace-regular">Registrarse</button>
         <button id="boton2" class="bruno-ace-regular">Iniciar Sesión</button>
     </div>
-    <div id="buscador">
-        <button>Buscar</button>
+    <div class = divBuscar>
+        <input type="text" id="buscador" name="buscar" placeholder="buscar...">
+        <button id="buscar">Buscar</button>
     </div>
 }</header>
-<body>
-    <div>
-        <br id="barra_columna">
-        <caption id="taula"></caption>
-
-    </div>
-    <div>
-        <hr id = "barra1">
-        <button id="filtrado">Filtrado</button>
+<body class="bodyWeb">
+    
+    <div class="filtBusc">
+        <!--<hr id = "barra1"> -->
+        <div class="barra1">
+            <button id="filtrado">Filtrado</button>
+        </div>
         <!--<div id = "vert">
             <button id="filtrado">Filtrado</button>
         </div>-->
         <!--<hr id = "barra_vertical">-->
-        <button id="configuracion">Configuración</button>
-        <hr id ="barra2">
+        <div class="filBusc2">
+            <button id="configuracion">Configuración</button>
+        </div>
+        <!--<hr id ="barra2"> -->
     </div>
-    <h1>SINTES</h1>
-    <div class="columna">
-        <ul id="menu">
+    <div class="menuLateral">
+        <ul>
             <li class="menu-item" (click)="toggleSubmenu($event)">Menu
                 <ul class="submenu" ngIf="submenuOpen">
                     <li><a href="#">Sintetizadores</a></li>
@@ -45,6 +45,25 @@
     <!--<script src="app.component.ts"></script> -->
 </body>
 <!--<div [ngClass]="condition ? 'green' : 'red'">Hola</div>-->
+<footer>
+    <div class="footer">
+        <!-- <div class="privacitat">
+            <button type="button" class = "btn">Política de privacidad</button>
+        </div>
+        <div class="sintedia">
+            <button type="button2" class = "btn">Acerca de Sintedia</button>
+        </div>
+        <div class="conducta">
+            <button type="button3" class = "btn">Código de conducta</button>
+        </div> -->
+        <button type="button" class = "btnPri">Política de privacidad</button>
+        <button type="button" class = "btnAce">Acerca de Sintedia</button>
+        <button type="button" class = "btnCod">Código de conducta</button>
+        <div class="logoFotter">
+            <img class="logoFot" src="">
+        </div>
+    </div>
+</footer>
 
 
 <router-outlet></router-outlet>
