@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<header class="headerDalt">@if(title){
-    <h1>{{title}}</h1>
-    <div id="h1">
-        <button id="boton1" class="bruno-ace-regular">Registrarse</button>
-        <button id="boton2" class="bruno-ace-regular">Iniciar Sesión</button>
-    </div>
-    <div class = divBuscar>
-        <input type="text" id="buscador" name="buscar" placeholder="buscar...">
-        <button id="buscar">Buscar</button>
-    </div>
-}</header>
+<head>
+    <meta charset="UTF-8" />
+</head>
 <body class="bodyWeb">
-    
+    <header class="headerDalt">@if(title){
+        <h1>{{title}}</h1>
+        <div id="h1">
+            <button id="registrarse" class="bruno-ace-regular">Registrarse</button>
+            <button id="iniciarSesion" class="bruno-ace-regular">Iniciar Sesión</button>
+        </div>
+        <div class ="divBuscador">
+            <div class="divImg">
+                <img src="">
+            </div>
+            <div class="divInput">
+                <input type="text" id="buscador" name="buscar" placeholder="buscar...">
+            </div>
+            <div class = "divBuscar">
+                <button id="buscar">Buscar</button>
+            </div>
+        </div>
+    }</header>
     <div class="filtBusc">
         <!--<hr id = "barra1"> -->
         <div class="barra1">
@@ -43,27 +52,18 @@
         </ul>
     </div>
     <!--<script src="app.component.ts"></script> -->
-</body>
-<!--<div [ngClass]="condition ? 'green' : 'red'">Hola</div>-->
-<footer>
-    <div class="footer">
-        <!-- <div class="privacitat">
-            <button type="button" class = "btn">Política de privacidad</button>
-        </div>
-        <div class="sintedia">
-            <button type="button2" class = "btn">Acerca de Sintedia</button>
-        </div>
-        <div class="conducta">
-            <button type="button3" class = "btn">Código de conducta</button>
-        </div> -->
-        <button type="button" class = "btnPri">Política de privacidad</button>
-        <button type="button" class = "btnAce">Acerca de Sintedia</button>
-        <button type="button" class = "btnCod">Código de conducta</button>
-        <div class="logoFotter">
+    <footer>
+        <div class="footer">
+            <button type="button" class = "btnPri">Política de privacidad</button>
+            <button type="button" class = "btnAce">Acerca de Sintedia</button>
+            <button type="button" class = "btnCod">Código de conducta</button>
+            <!-- 
+            <div class="logoFotter">
+                <img class="logoFot" src="">
+            </div> -->
             <img class="logoFot" src="">
         </div>
-    </div>
-</footer>
-
-
+    </footer>
+</body>
+<!--<div [ngClass]="condition ? 'green' : 'red'">Hola</div>-->
 <router-outlet></router-outlet>
