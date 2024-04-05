@@ -15,6 +15,32 @@ h1 {
     color: #FFF7D1;
 }
 
+#registrarse {
+    color: #FFF7D1;
+    background-color: #1F1F1F;
+    width: 120px;
+    height: 60px;
+    margin-left: 1225px;
+    padding-block:  10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15%;
+    border: 3px solid #FFF7D1;
+}
+
+#iniciarSesion {
+    color: #FFF7D1;
+    background-color: #1F1F1F;
+    width: 120px;
+    height: 60px;
+    margin-left: 10px;
+    padding-block:  10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15%;
+    border: 3px solid #FFF7D1;
+}
+
 .divBuscador {
     display:flex;
     max-width: 850px;
@@ -42,22 +68,38 @@ h1 {
 
 .divInput{
     /*background: linear-gradient(to right, #1F1F1F, #858585, 80%, #1F1F1F);*/
-    border-radius: 15%;
-    width: 630px; /* Establece el ancho máximo del div */
-    margin-top: opx;
+    margin-top: 0px;
     margin-left: 0px;
+    width: 630px; /* Establece el ancho máximo del div */
     height: 25px;
-    padding: 1px;
 }
+
+#buscador {
+    background: radial-gradient(circle at center, #FFF7D1, #1F1F1F);
+    width: 624px;
+    height: 21px;
+}
+
 
 .divBuscar {
     border-left: 3px solid #FFF7D1;
     margin-left: 0px;
     height: 25px;
     width: 140px;
-    border-top-right-radius: 15%;
-    border-bottom-right-radius: 15%;
+    text-align: center;
 }
+
+#buscarButon{
+    background: #1F1F1F;
+    color:#FFF7D1;
+    border: 1px solid #FFF7D1;
+    height: 25px;
+    padding: 3px;
+    width: 140px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 
 .filtBusc {
     border-top: 3px solid #FFF7D1;
@@ -66,7 +108,7 @@ h1 {
     color: #FFF7D1;
     background-color: #1F1F1F;
     display: flex;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .filBusc2 {
@@ -124,38 +166,9 @@ h1 {
     margin-top: -60px;
 }
 
-#registrarse {
-    color: #FFF7D1;
-    background-color: #1F1F1F;
-    width: 120px;
-    height: 60px;
-    margin-left: 1225px;
-    padding-block:  10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 15%;
-    border: 3px solid #FFF7D1;
-}
-
-#iniciarSesion {
-    color: #FFF7D1;
-    background-color: #1F1F1F;
-    width: 120px;
-    height: 60px;
-    margin-left: 10px;
-    padding-block:  10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 15%;
-    border: 3px solid #FFF7D1;
-}
-
-#buscador {
-    border: 10px, solid #ffffff;
-}
-
 #buscar {
     border: 3px, solid #ffffff;
+    margin-top: 0px;
 }
 
 #dos{
@@ -196,6 +209,13 @@ h1 {
     height: 550px;
     margin-top: 0px;
     display: flex;
+}
+
+.menu_item {
+    display:grid;
+    border-left: 3px solid #FFF7D1;
+    margin-left: 0px;
+    margin-top: 0px;
 }
 /*
 .bruno-ace-regular {

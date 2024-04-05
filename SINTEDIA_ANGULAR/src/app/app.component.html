@@ -6,62 +6,64 @@
     <header class="headerDalt">@if(title){
         <h1>{{title}}</h1>
         <div id="h1">
-            <button id="registrarse" class="bruno-ace-regular">Registrarse</button>
-            <button id="iniciarSesion" class="bruno-ace-regular">Iniciar Sesión</button>
+            <button id="registrarse" class="bruno-ace-regular" title="Regístrate" onClick="">Registrarse</button>
+            <button id="iniciarSesion" class="bruno-ace-regular" title="Iniciar sesión" onClick="">Iniciar Sesión</button>
         </div>
         <div class ="divBuscador">
             <div class="divImg">
                 <img src="">
             </div>
             <div class="divInput">
-                <input type="text" id="buscador" name="buscar" placeholder="buscar...">
+                <input type="text" id="buscador" name="buscar" placeholder="buscar..." title="Buscar" onClick="">
             </div>
             <div class = "divBuscar">
-                <button id="buscar">Buscar</button>
+                <button id="buscarButon" title="Boton de buscar" onClick="">Buscar</button>
             </div>
         </div>
     }</header>
     <div class="filtBusc">
         <!--<hr id = "barra1"> -->
         <div class="barra1">
-            <button id="filtrado">Filtrado</button>
+            <button id="filtrado" title="Filtro" onClick="">Filtrado</button>
         </div>
         <!--<div id = "vert">
             <button id="filtrado">Filtrado</button>
         </div>-->
         <!--<hr id = "barra_vertical">-->
         <div class="filBusc2">
-            <button id="configuracion">Configuración</button>
+            <button id="configuracion" title="Configuración de usuario" onClick="">Configuración</button>
         </div>
         <!--<hr id ="barra2"> -->
     </div>
     <div class="menuLateral">
         <ul>
-            <li class="menu-item" (click)="toggleSubmenu($event)">Menu
-                <ul class="submenu" ngIf="submenuOpen">
-                    <li><a href="#">Sintetizadores</a></li>
-                    <li><a href="#">Empresas</a></li>
-                    <li><a href="#">Música</a></li>
-                    <li><a href="#">Diseño Sonoro</a></li>
-                    <li><a href="#">Historia</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="pagina-1.component.html">Listas</a></li>
-            <li class="menu-item" (click)="toggleSubmenu($event)">Crear</li>
-            <li class="menu-item" (click)="toggleSubmenu($event)">Sonidos</li>
+            <div class="">
+                <h2 class="menu_item" (click)="toggleSubmenu($event)">Menu
+                    <ul class="submenu" ngIf="submenuOpen" onClick="">
+                        <li onClick=""><a href="#">Sintetizadores</a></li>
+                        <li onClick=""><a href="#">Empresas</a></li>
+                        <li onClick=""><a href="#">Música</a></li>
+                        <li onClick=""><a href="#">Diseño Sonoro</a></li>
+                        <li onClick=""><a href="#">Historia</a></li>
+                    </ul>
+                </h2>
+                <li class="menu-item" onClick=""><a href="pagina-1.component.html">Listas</a></li>
+                <li class="menu-item" (click)="toggleSubmenu($event)">Crear</li>
+                <li class="menu-item" (click)="toggleSubmenu($event)">Sonidos</li>
+            </div>
         </ul>
     </div>
     <!--<script src="app.component.ts"></script> -->
     <footer>
         <div class="footer">
-            <button type="button" class = "btnPri">Política de privacidad</button>
-            <button type="button" class = "btnAce">Acerca de Sintedia</button>
-            <button type="button" class = "btnCod">Código de conducta</button>
+            <button type="button" class = "btnPri" onClick="">Política de privacidad</button>
+            <button type="button" class = "btnAce" onClick="">Acerca de Sintedia</button>
+            <button type="button" class = "btnCod" onClick="">Código de conducta</button>
             <!-- 
             <div class="logoFotter">
                 <img class="logoFot" src="">
             </div> -->
-            <img class="logoFot" src="">
+            <img class="logoFot" src="" onClick="">
         </div>
     </footer>
 </body>
