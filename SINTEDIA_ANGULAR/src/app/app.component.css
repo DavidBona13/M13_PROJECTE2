@@ -14,6 +14,9 @@
 h1 {
     color: #FFF7D1;
 }
+.titol {
+    margin-left: 15px;
+}
 
 #registrarse {
     color: #FFF7D1;
@@ -66,16 +69,25 @@ h1 {
     
 }
 
+#imageBuscador {
+    width: 75px;
+    height: 25px;
+    margin-top: 0px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background: linear-gradient(to right, #1F1F1F 90%, #FFF7D1);
+}
+
 .divInput{
-    /*background: linear-gradient(to right, #1F1F1F, #858585, 80%, #1F1F1F);*/
     margin-top: 0px;
     margin-left: 0px;
-    width: 630px; /* Establece el ancho máximo del div */
+    width: 630px; 
     height: 25px;
 }
 
 #buscador {
-    background: radial-gradient(circle at center, #FFF7D1, #1F1F1F);
+    background: radial-gradient(circle at center, rgba(255, 247, 209, 0.45), #1F1F1F);
+    color: rgba(255, 247, 209, 0.8);
     width: 624px;
     height: 21px;
 }
@@ -109,6 +121,7 @@ h1 {
     background-color: #1F1F1F;
     display: flex;
     margin-top: 25px;
+    /*position: relative;*/
 }
 
 .filBusc2 {
@@ -205,8 +218,9 @@ h1 {
     background-color: #1F1F1F;
     color: #FFF7D1;
     border-right: 3px solid #FFF7D1;
+    border-bottom: 3px solid #FFF7D1;
     width: 250px;
-    height: 550px;
+    height: 1000px;
     margin-top: 0px;
     display: flex;
 }
@@ -214,9 +228,12 @@ h1 {
 .menu_item {
     display:grid;
     border-left: 3px solid #FFF7D1;
+    width: 200px;
     margin-left: 0px;
     margin-top: 0px;
 }
+
+
 /*
 .bruno-ace-regular {
     font-family: "Bruno Ace", sans-serif;
@@ -248,6 +265,18 @@ h1 {
 .submenu {
     display: none; 
 }*/
+#sintes {
+    color: #FFF7D1;
+    text-decoration: none;
+}
+
+
+.articles {
+    height: 1000px;
+    width: 1265px;
+    margin-left: 250px;
+    margin-top: -550px
+}
 
 .footer {
     margin-top: 0px;
