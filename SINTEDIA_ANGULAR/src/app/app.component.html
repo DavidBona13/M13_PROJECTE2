@@ -4,14 +4,14 @@
 </head>
 <body class="bodyWeb">
     <header class="headerDalt">@if(title){
-        <h1>{{title}}</h1>
+        <h1 class="titol">{{title}}</h1>
         <div id="h1">
             <button id="registrarse" class="bruno-ace-regular" title="Regístrate" onClick="">Registrarse</button>
             <button id="iniciarSesion" class="bruno-ace-regular" title="Iniciar sesión" onClick="">Iniciar Sesión</button>
         </div>
         <div class ="divBuscador">
             <div class="divImg">
-                <img src="">
+                <img ID="imageBuscador" src="">
             </div>
             <div class="divInput">
                 <input type="text" id="buscador" name="buscar" placeholder="buscar..." title="Buscar" onClick="">
@@ -35,24 +35,32 @@
         </div>
         <!--<hr id ="barra2"> -->
     </div>
-    <div class="menuLateral">
-        <ul>
-            <div class="">
-                <h2 class="menu_item" (click)="toggleSubmenu($event)">Menu
-                    <ul class="submenu" ngIf="submenuOpen" onClick="">
-                        <li onClick=""><a href="#">Sintetizadores</a></li>
-                        <li onClick=""><a href="#">Empresas</a></li>
-                        <li onClick=""><a href="#">Música</a></li>
-                        <li onClick=""><a href="#">Diseño Sonoro</a></li>
-                        <li onClick=""><a href="#">Historia</a></li>
-                    </ul>
-                </h2>
-                <li class="menu-item" onClick=""><a href="pagina-1.component.html">Listas</a></li>
-                <li class="menu-item" (click)="toggleSubmenu($event)">Crear</li>
-                <li class="menu-item" (click)="toggleSubmenu($event)">Sonidos</li>
+    <div class="contingut">
+        <div class="menuLateral">
+            <ul class="">
+                <div class="">
+                    <h2 class="menu_item" (click)="toggleSubmenu($event)">Menu
+                        <ul class="submenu" ngIf="submenuOpen" onClick="">
+                            <li id="sintes" onClick=""><a href="#">Sintetizadores</a></li>
+                            <li onClick=""><a href="#">Empresas</a></li>
+                            <li onClick=""><a href="#">Música</a></li>
+                            <li onClick=""><a href="#">Diseño Sonoro</a></li>
+                            <li onClick=""><a href="#">Historia</a></li>
+                        </ul>
+                    </h2>
+                    <li class="menu-item" onClick=""><a href="pagina-1.component.html">Listas</a></li>
+                    <li class="menu-item" (click)="toggleSubmenu($event)">Crear</li>
+                    <li class="menu-item" (click)="toggleSubmenu($event)">Sonidos</li>
+                </div>
+            </ul>
+        </div>
+        <div class="articles">
+            <div class="art1">
+
             </div>
-        </ul>
-    </div>
+        </div>
+    </div>    
+
     <!--<script src="app.component.ts"></script> -->
     <footer>
         <div class="footer">
