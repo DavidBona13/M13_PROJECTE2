@@ -62,20 +62,22 @@ h1 {
     margin-left: 0px;
     width: 75px;
     height: 25px;
-    border-right: 3px solid #FFF7D1;
     border-start-start-radius: 15%;
     border-top-left-radius: 15%;
     border-bottom-left-radius: 15%;
+    background: #FFF7D1;
     
 }
 
 #imageBuscador {
-    width: 75px;
-    height: 25px;
-    margin-top: 0px;
+    width: 25px;
+    height: 20px;
+    margin-top: 2.5px;
+    margin-left: 25px;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-    background: linear-gradient(to right, #1F1F1F 90%, #FFF7D1);
+    /*background: linear-gradient(to right, #1F1F1F 90%, #FFF7D1);*/
+    filter: grayscale(10%) sepia(10%) saturate(80%) hue-rotate(40deg);
 }
 
 .divInput{
@@ -107,7 +109,7 @@ h1 {
     border: 1px solid #FFF7D1;
     height: 25px;
     padding: 3px;
-    width: 140px;
+    width: 143px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -218,9 +220,8 @@ h1 {
     background-color: #1F1F1F;
     color: #FFF7D1;
     border-right: 3px solid #FFF7D1;
-    border-bottom: 3px solid #FFF7D1;
     width: 250px;
-    height: 1000px;
+    height: 700px;
     margin-top: 0px;
     display: flex;
 }
@@ -228,9 +229,40 @@ h1 {
 .menu_item {
     display:grid;
     border-left: 3px solid #FFF7D1;
+    border-bottom: 3px solid #FFF7D1;
     width: 200px;
     margin-left: 0px;
     margin-top: 0px;
+}
+
+#sintes {
+    margin-top:5px;
+    border-top: 3px solid #FFF7D1;
+}
+
+#empresa {
+    margin-top: 5px;
+    border-top: 3px solid #FFF7D1;
+}
+
+#musica {
+    margin-top: 5px;
+    border-top: 3px solid #FFF7D1;
+}
+
+#diseny {
+    margin-top: 5px;
+    border-top: 3px solid #FFF7D1;
+}
+
+#historia {
+    margin-top: 5px;
+    border-top: 3px solid #FFF7D1;
+}
+
+.contingut {
+    display:flex;
+    border-left: 3px solid #FFF7D1;
 }
 
 
@@ -272,10 +304,41 @@ h1 {
 
 
 .articles {
-    height: 1000px;
+    height: 700px;
     width: 1265px;
-    margin-left: 250px;
-    margin-top: -550px
+}
+
+.art1{
+    display: flex;
+    border: 3px solid #FFF7D1;
+    margin-top: 75px;
+    margin-left: 75px;
+    width: 1050px;
+    height: 110px;
+}
+
+#im1 {
+    margin-top: 0px;
+    margin-left: 0px;
+    border: 3px solid #FFF7D1;
+    width: 175px;
+    height: 108px;
+}
+
+#titolArt1 {
+    border: 3px solid #FFF7D1;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 875px;
+    height: 35px;
+}
+
+#iniciArticle {
+    border: 3px solid #FFF7D1;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 875;
+    height: 75px;
 }
 
 .footer {
