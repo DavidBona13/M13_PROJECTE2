@@ -11,7 +11,7 @@
         </div>
         <div class ="divBuscador">
             <div class="divImg">
-                <img ID="imageBuscador" src="">
+                <img ID="imageBuscador" src="./assets/buscar.png">
             </div>
             <div class="divInput">
                 <input type="text" id="buscador" name="buscar" placeholder="buscar..." title="Buscar" onClick="">
@@ -41,22 +41,24 @@
                 <div class="">
                     <h2 class="menu_item" (click)="toggleSubmenu($event)">Menu
                         <ul class="submenu" ngIf="submenuOpen" onClick="">
-                            <li id="sintes" onClick=""><a href="#">Sintetizadores</a></li>
-                            <li onClick=""><a href="#">Empresas</a></li>
-                            <li onClick=""><a href="#">Música</a></li>
-                            <li onClick=""><a href="#">Diseño Sonoro</a></li>
-                            <li onClick=""><a href="#">Historia</a></li>
+                            <li ID="sintes" onClick=""><a href="#">Sintetizadores</a></li>
+                            <li ID="empresa" onClick=""><a href="#">Empresas</a></li>
+                            <li ID="musica" onClick=""><a href="#">Música</a></li>
+                            <li ID="diseny" onClick=""><a href="#">Diseño Sonoro</a></li>
+                            <li ID="historia" onClick=""><a href="#">Historia</a></li>
                         </ul>
                     </h2>
-                    <li class="menu-item" onClick=""><a href="pagina-1.component.html">Listas</a></li>
-                    <li class="menu-item" (click)="toggleSubmenu($event)">Crear</li>
-                    <li class="menu-item" (click)="toggleSubmenu($event)">Sonidos</li>
+                    <h2 class="menu-item" onClick=""><a href="pagina-1.component.html">Listas</a></h2>
+                    <h2 class="menu-item" (click)="toggleSubmenu($event)">Crear</h2>
+                    <h2 class="menu-item" (click)="toggleSubmenu($event)">Sonidos</h2>
                 </div>
             </ul>
         </div>
         <div class="articles">
             <div class="art1">
-
+                <img ID="im1" src="">
+                <h2 ID="titolArt1"></h2>
+                <textarea ID="iniciArticle"></textarea>"
             </div>
         </div>
     </div>    
