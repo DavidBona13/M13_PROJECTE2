@@ -12,18 +12,19 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent { //implements AfterViewInit
   condition = true;
   text = '';
   title = 'SINTEDIA_ANGULAR';
-
+/*
   submenuOpen = false;
   
   toggleSubmenu(event: MouseEvent) {
     this.submenuOpen = !this.submenuOpen;
-    event.stopPropagation(); // Para evitar que el click se propague a otros elementos
+    event.stopPropagation(); // Para evitar que el click se propague a otros elementos*/
   }
 
+  /*
   ngAfterViewInit() {
     const menuItems = document.querySelectorAll('.menu-item');
 
@@ -44,4 +45,4 @@ export class AppComponent implements AfterViewInit{
       });
     });
   }
-}
+}*/
