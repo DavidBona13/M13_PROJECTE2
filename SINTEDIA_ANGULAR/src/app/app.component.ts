@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent { //implements AfterViewInit
   condition = true;
   text = '';
-  title = 'SINTEDIA_ANGULAR';
+  title = 'SINTEDIA';
 /*
   submenuOpen = false;
   
