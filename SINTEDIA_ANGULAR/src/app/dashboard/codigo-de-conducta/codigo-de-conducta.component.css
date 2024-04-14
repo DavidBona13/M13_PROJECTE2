@@ -105,24 +105,17 @@ h1 {
 }
 
 #txt1 {
-    margin-top: 25px;
+    margin-top: 50px;
     color: #FFF7D1;
     margin-left: 250px;
     margin-right: 175px;
     line-height: 1;
 }
 
-#titol2 {
-    color: #FFF7D1;
-    margin-top: 40px;
-    margin-left: 250px;
-    line-height: 1;
-}
-
 #txt2 {
     color: #FFF7D1;
     margin-top: 8px;
-    margin-left: 300px;
+    margin-left: 250px;
     margin-right: 175px;
     padding-bottom: 1px; /* Espacio para la línea */
     line-height: 1;
@@ -131,7 +124,7 @@ h1 {
 #txt3 {
     color: #FFF7D1;
     margin-top: 8px;
-    margin-left: 300px;
+    margin-left: 250px;
     margin-right: 175px;
     padding-bottom: 1px; /* Espacio para la línea */
     line-height: 1;
@@ -140,7 +133,7 @@ h1 {
 #txt4 {
     color: #FFF7D1;
     margin-top: 8px;
-    margin-left: 300px;
+    margin-left: 250px;
     margin-right: 175px;
     padding-bottom: 1px; /* Espacio para la línea */
     line-height: 1;
@@ -149,7 +142,7 @@ h1 {
 #txt5 {
     color: #FFF7D1;
     margin-top: 8px;
-    margin-left: 300px;
+    margin-left: 250px;
     margin-right: 175px;
     padding-bottom: 1px; /* Espacio para la línea */
     line-height: 1;
@@ -158,41 +151,16 @@ h1 {
 #txt6 {
     color: #FFF7D1;
     margin-top: 8px;
-    margin-left: 300px;
+    margin-left: 250px;
     margin-right: 175px;
     padding-bottom: 1px; /* Espacio para la línea */
-    line-height: 1;
-}
-
-#titol3 {
-    color: #FFF7D1;
-    margin-left: 250px;
-    margin-top: 40px;
     line-height: 1;
 }
 
 #txt7 {
     color: #FFF7D1;
     margin-top: 8px;
-    margin-left: 350px;
-    margin-right: 175px;
-    padding-bottom: 1px; /* Espacio para la línea */
-    line-height: 1;
-}
-
-#txt8 {
-    color: #FFF7D1;
-    margin-top: 8px;
-    margin-left: 350px;
-    margin-right: 175px;
-    padding-bottom: 1px; /* Espacio para la línea */
-    line-height: 1;
-}
-
-#txt9 {
-    color: #FFF7D1;
-    margin-top: 8px;
-    margin-left: 350px;
+    margin-left: 250px;
     margin-right: 175px;
     padding-bottom: 1px; /* Espacio para la línea */
     line-height: 1;
