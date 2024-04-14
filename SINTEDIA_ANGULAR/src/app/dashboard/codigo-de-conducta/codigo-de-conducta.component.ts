@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-iniciar-sesion',
+  selector: 'app-codigo-de-conducta',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet],
-  templateUrl: './iniciar-sesion.component.html',
-  styleUrl: './iniciar-sesion.component.css'
+  templateUrl: './codigo-de-conducta.component.html',
+  styleUrl: './codigo-de-conducta.component.css'
 })
-export class IniciarSesionComponent {
+export class CodigoDeConductaComponent {
 
 }
