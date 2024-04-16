@@ -2,33 +2,63 @@
 <head>
     <meta charset="UTF-8" />
 </head>
-<body class="registroClass">
+<body class="bodyWeb">
     <header class="headerDalt">@if(title){
         <h1 class="titol">{{title}}</h1>
         <div id="h1">
+            <button id="registrarse" class="bruno-ace-regular" title="Regístrate" routerLink="/dashboard/registro">Registrarse</button>
+            <button id="iniciarSesion" class="bruno-ace-regular" title="Iniciar sesión" onClick="">Iniciar Sesión</button>
+        </div>
+        <div class ="divBuscador">
+            <div class="divImg">
+                <img ID="imageBuscador" src="./assets/buscar.png">
+            </div>
+            <div class="divInput">
+                <input type="text" id="buscador" name="buscar" placeholder="buscar..." title="Buscar" onClick="">
+            </div>
+            <div class = "divBuscar">
+                <button id="buscarButon" title="Boton de buscar" onClick="">Buscar</button>
+            </div>
         </div>
     }</header>
-    <div class="rayaInici">
+    <div class="filtBusc">
+        <div class="barra1">
+            <button id="filtrado" title="Filtro" onClick="">Filtrado</button>
+        </div>
+        <div class="filBusc2">
+            <button id="configuracion" title="Configuración de usuario" onClick="">Configuración</button>
+        </div>
     </div>
     <div class="contingut">
-        <div class="letras"> 
-            <h2 ID="titolR">Acerca de Sintedia:</h2>
-            <p ID="txt1">&middot; Sintedia es una enciclopedia web de contenido libre, especializado en el mundo del diseño sonoro, especialmente en el mundo de los sintetizadores y su historia. Sintedia, depende única y exclusivamente de sus usuarios, quiénes tienen total libertad para crear y modificar los artículos.</p>
-            <h3 ID="titol2">Pilares de Sintedia:</h3>
-            <p ID="txt2">&middot; Sintedia es una enciclopedia, y todos los esfuerzos deben ir en ese sentido.</p>
-            <p ID="txt3">&middot; Todos los artículos deben ser neutrales.</p>
-            <p ID="txt4">&middot; El objetivo es construir una enciclopedia de contenido libre, no se admite material con derechos de autos sin el permiso correspondiente.</p>
-            <p ID="txt5">&middot; Sintedia sigue la base del respeto mutuo, donde se lleguen a acuerdos cuando no se compartan puntos de vista.</p>
-            <p ID="txt6">&middot; Hay que ser valiente para editar páginas, pero usando el sentido común.</p>
-            <h3 ID="titol3">Normas sobre la calidad:</h3>
-            <p ID="txt7">&middot; Sintedia se rige por unas normas de calidad que no son debatibles, estas normas son:</p>
-            <p ID="txt8">&middot; La información nunca debe procedes en última instancia de los propios editores.</p>
-            <p ID="txt9">&middot; Los artículos deben incluir referéncias a las fuentes de las que proviene la información.</p>
+        <div class="menuLateral">
+            <ul class="">
+                <div class="menuGran">
+                    <h2 class="menu_item" routerLink="/dashboard">Menu   <!--toggleSubmenu($event)-->
+                        <ul class="submenu">
+                            <li ID="sintes">Sintetizadores</li>
+                            <li ID="empresa">Empresas</li>
+                            <li ID="musica">Música</li>
+                            <li ID="diseny">Diseño Sonoro</li>
+                            <li ID="historia">Historia</li>
+                        </ul>
+                    </h2>
+                    <h2 class="menu-item"><a href="">Listas</a></h2>
+                    <h2 class="menu-item">Crear</h2> <!--toggleSubmenu($event)-->
+                    <h2 class="menu-item">Sonidos</h2> <!--toggleSubmenu($event)-->
+                </div>
+            </ul>
         </div>
-    </div> 
-
+        <div class="articles">
+            <div class="art1">
+                <img ID="im1" src="./assets/KorgOPsix.jpeg">
+                <div class = "textArticle">
+                    <h3 ID="titolArt1"> Korg Opsix</h3>
+                </div>
+            </div>
+        </div>
+    </div>    
     <footer>
-        <div class="footer"> 
+        <div class="footer">
             <button type="button" class = "btnPri" onClick="">Política de privacidad</button>
             <button type="button" class = "btnAce" onClick="">Acerca de Sintedia</button>
             <button type="button" class = "btnCod" onClick="">Código de conducta</button>
@@ -36,6 +66,5 @@
         </div>
     </footer>
 </body>
-<!--<div [ngClass]="condition ? 'green' : 'red'">Hola</div>-->
 <router-outlet></router-outlet>
 
