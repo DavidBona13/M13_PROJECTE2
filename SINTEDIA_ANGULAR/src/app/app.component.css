@@ -8,12 +8,13 @@
     margin: 0;
     padding: 0;
     color: #FFF7D1;
-    background-color: #2D2B2D;
+    background-color: #1F1F1F;
 }
 
-h1 {
+#h1 {
     color: #FFF7D1;
 }
+
 .titol {
     margin-left: 15px;
 }
@@ -58,6 +59,7 @@ h1 {
     border-top-right-radius: 15%;
     border-bottom-right-radius: 15%;*/
 }
+
 .divImg {
     margin-left: 0px;
     width: 75px;
@@ -242,7 +244,7 @@ h1 {
 
 #sintes {
     margin-top:5px;
-    background: linear-gradient(to right, #2D2B2D,  #FFF7D1); 
+    background: linear-gradient(to right, #A4A4A4,  #1F1F1F); 
     color: #1F1F1F;
 }
 
@@ -265,6 +267,7 @@ h1 {
 .contingut {
     display:flex;
     border-left: 3px solid #FFF7D1;
+    background-color: #2D2B2D;
 }
 
 
@@ -312,12 +315,12 @@ h1 {
 }
 
 .art1{
-    display: flex;
+    display:grid;
     border: 3px solid #FFF7D1;
     margin-top: 75px;
     margin-left: 75px;
-    width: 1050px;
-    height: 110px;
+    width: 175px;
+    height: 160px;
 }
 
 #im1 {
@@ -329,14 +332,13 @@ h1 {
 
 .textArticle {
     background: radial-gradient(circle at center, rgba(255, 247, 209, 0.2), #1F1F1F);
-    border-left: 3px solid #FFF7D1;
-    width: 872px;
-    height: 110px;
+    width: 180px;
+    height: 70px;
 }
 
 #titolArt1 {
-    margin-top: 10px;
-    margin-left: 15px;
+    margin-top: 12px;
+    margin-left: 65px;
     width: 870px;
     height: 32px;
     color: #FFF7D1;
@@ -355,7 +357,6 @@ h1 {
 .btnPri{
     margin-top: 10px;
     margin-left: 90px;
-
 }
 
 .btnAce {
