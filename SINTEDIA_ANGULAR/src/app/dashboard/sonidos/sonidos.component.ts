@@ -1,9 +1,12 @@
+import { ChangeDetectionStrategy } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-sonidos',
   standalone: true,
-  imports: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterOutlet],
   templateUrl: './sonidos.component.html',
   styleUrl: './sonidos.component.css'
 })

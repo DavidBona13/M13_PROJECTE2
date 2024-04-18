@@ -11,10 +11,9 @@
     background-color: #1F1F1F;
 }
 
-#h1 {
+h1 {
     color: #FFF7D1;
 }
-
 .titol {
     margin-left: 15px;
 }
@@ -59,7 +58,6 @@
     border-top-right-radius: 15%;
     border-bottom-right-radius: 15%;*/
 }
-
 .divImg {
     margin-left: 0px;
     width: 75px;
@@ -242,32 +240,45 @@
     padding-left: 10px;
 }
 
+.menu_item3 {
+    background: linear-gradient(to right, #A4A4A4,  #1F1F1F);
+    border-left: 1px solid #FFF7D1;
+    border-bottom: 1px solid #FFF7D1;
+    width: 200px;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding-left: 10px;
+    width: 195px;
+}
+
 #sintes {
     margin-top:5px;
-    background: linear-gradient(to right, #A4A4A4,  #1F1F1F); 
-    color: #1F1F1F;
+    border-top: 1px solid #FFF7D1;
 }
 
 #empresa {
     margin-top: 5px;
+    border-top: 1px solid #FFF7D1;
 }
 
 #musica {
     margin-top: 5px;
+    border-top: 1px solid #FFF7D1;
 }
 
 #diseny {
     margin-top: 5px;
+    border-top: 1px solid #FFF7D1;
 }
 
 #historia {
     margin-top: 5px;
+    border-top: 1px solid #FFF7D1;
 }
 
 .contingut {
     display:flex;
     border-left: 3px solid #FFF7D1;
-    background-color: #2D2B2D;
 }
 
 
@@ -304,7 +315,6 @@
 }*/
 #sintes {
     color: #FFF7D1;
-    background-color: #FFF7D1;
     text-decoration: none;
 }
 
@@ -315,12 +325,12 @@
 }
 
 .art1{
-    display:grid;
+    display: flex;
     border: 3px solid #FFF7D1;
     margin-top: 75px;
     margin-left: 75px;
-    width: 175px;
-    height: 160px;
+    width: 1050px;
+    height: 110px;
 }
 
 #im1 {
@@ -332,16 +342,25 @@
 
 .textArticle {
     background: radial-gradient(circle at center, rgba(255, 247, 209, 0.2), #1F1F1F);
-    width: 180px;
-    height: 70px;
+    border-left: 3px solid #FFF7D1;
+    width: 872px;
+    height: 110px;
 }
 
 #titolArt1 {
-    margin-top: 12px;
-    margin-left: 65px;
+    margin-top: 10px;
+    margin-left: 15px;
     width: 870px;
     height: 32px;
     color: #FFF7D1;
+}
+
+#iniciArticle {
+    color: #FFF7D1;
+    margin-top: 0px;
+    margin-left: 15px;
+    width: 870px;
+    height: 50px;
 }
 
 .footer {
@@ -357,6 +376,7 @@
 .btnPri{
     margin-top: 10px;
     margin-left: 90px;
+
 }
 
 .btnAce {

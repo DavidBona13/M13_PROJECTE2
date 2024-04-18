@@ -1,9 +1,12 @@
+import { ChangeDetectionStrategy } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-sintetizadores-2',
   standalone: true,
-  imports: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterOutlet],
   templateUrl: './sintetizadores-2.component.html',
   styleUrl: './sintetizadores-2.component.css'
 })

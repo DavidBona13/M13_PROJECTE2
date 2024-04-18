@@ -1,9 +1,12 @@
+import { ChangeDetectionStrategy } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-crear-1',
   standalone: true,
-  imports: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterOutlet],
   templateUrl: './crear-1.component.html',
   styleUrl: './crear-1.component.css'
 })
