@@ -1,1 +1,85 @@
-<p>sintetizadores-2 works!</p>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body class="bodyWeb">
+    <header class="headerDalt">@if(title){
+        <h1 class="titol">{{title}}</h1>
+        <div id="h1">
+            <button id="registrarse" class="bruno-ace-regular" title="Regístrate" routerLink="/dashboard/registro">Registrarse</button>
+            <button id="iniciarSesion" class="bruno-ace-regular" title="Iniciar sesión" onClick="">Iniciar Sesión</button>
+        </div>
+        <div class ="divBuscador">
+            <div class="divImg">
+                <img ID="imageBuscador" src="./assets/buscar.png">
+            </div>
+            <div class="divInput">
+                <input type="text" id="buscador" name="buscar" placeholder="buscar..." title="Buscar" onClick="">
+            </div>
+            <div class = "divBuscar">
+                <button id="buscarButon" title="Boton de buscar" onClick="">Buscar</button>
+            </div>
+        </div>
+    }</header>
+    <div class="filtBusc">
+        <!--<hr id = "barra1"> -->
+        <div class="barra1">
+            <button id="filtrado" title="Filtro" onClick="">Filtrado</button>
+        </div>
+        <!--<div id = "vert">
+            <button id="filtrado">Filtrado</button>
+        </div>-->
+        <!--<hr id = "barra_vertical">-->
+        <div class="filBusc2">
+            <button id="configuracion" title="Configuración de usuario" onClick="">Configuración</button>
+        </div>
+        <!--<hr id ="barra2"> -->
+    </div>
+    <div class="contingut">
+        <div class="menuLateral">
+            <ul class="">
+                <div class="menuGran">
+                    <h2 class="menu_item" routerLink="/dashboard">Menu   <!--toggleSubmenu($event)-->
+                        <ul class="submenu">
+                            <li ID="sintes">Sintetizadores</li>
+                            <li ID="empresa">Empresas</li>
+                            <li ID="musica">Música</li>
+                            <li ID="diseny">Diseño Sonoro</li>
+                            <li ID="historia">Historia</li>
+                        </ul>
+                    </h2>
+                    <h2 class="menu-item">Listas</h2>
+                    <h2 class="menu-item">Crear</h2> <!--toggleSubmenu($event)-->
+                    <h2 class="menu-item">Sonidos</h2> <!--toggleSubmenu($event)-->
+                </div>
+            </ul>
+        </div>
+        <div class="articles">
+            <h1 id="itEmpresa">Korg:</h1>
+            <div class="art1">
+                <img ID="im1" src="./assets/KorgOPsix.jpeg">
+                <div class = "textArticle">
+                    <h3 ID="titolArt1"> Korg Opsix</h3>
+                    <p ID="iniciArticle">Korg opsix es un sintetizador digital con síntesis FM rediseñada para un uso más único y flexible, fabricado el año 2020.</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <!--<script src="app.component.ts"></script> -->
+    <footer>
+        <div class="footer">
+            <button type="button" class = "btnPri" onClick="">Política de privacidad</button>
+            <button type="button" class = "btnAce" onClick="">Acerca de Sintedia</button>
+            <button type="button" class = "btnCod" onClick="">Código de conducta</button>
+            <!-- 
+            <div class="logoFotter">
+                <img class="logoFot" src="">
+            </div> -->
+            <img class="logoFot" src="" onClick="">
+        </div>
+    </footer>
+</body>
+<!--<div [ngClass]="condition ? 'green' : 'red'">Hola</div>-->
+<router-outlet></router-outlet>
+
