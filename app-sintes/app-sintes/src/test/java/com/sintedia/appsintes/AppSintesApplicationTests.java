@@ -1,10 +1,10 @@
-package com.sintedia.projectemongoback;
+package com.sintedia.appsintes;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProjecteMongoBackApplicationTests {
+class AppSintesApplicationTests {
 
 	@Test
 	void contextLoads() {
