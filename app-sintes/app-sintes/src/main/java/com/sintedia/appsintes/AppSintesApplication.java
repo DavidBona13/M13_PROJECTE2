@@ -1,13 +1,13 @@
-package com.sintedia.projectemongoback;
+package com.sintedia.appsintes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjecteMongoBackApplication {
+public class AppSintesApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(ProjecteMongoBackApplication.class, args);
+		SpringApplication.run(AppSintesApplication.class, args);
 	}
+
 }
