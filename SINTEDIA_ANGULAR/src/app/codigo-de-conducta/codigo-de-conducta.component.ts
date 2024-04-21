@@ -5,7 +5,6 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-codigo-de-conducta',
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet],
   templateUrl: './codigo-de-conducta.component.html',
   styleUrl: './codigo-de-conducta.component.css'

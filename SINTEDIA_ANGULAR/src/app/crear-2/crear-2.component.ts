@@ -5,7 +5,6 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-crear-2',
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet],
   templateUrl: './crear-2.component.html',
   styleUrl: './crear-2.component.css'
