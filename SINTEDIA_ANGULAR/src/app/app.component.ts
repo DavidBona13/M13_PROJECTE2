@@ -26,7 +26,7 @@ export class AppComponent { //implements AfterViewInit
 
   menuOpen: boolean = false;
 
-  toggleMenu() {
+  openMenu() {
     this.menuOpen = true;
   }
 /*

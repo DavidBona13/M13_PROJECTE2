@@ -22,24 +22,19 @@
         </div>
     }</header>
     <div class="filtBusc">
-        <!--<hr id = "barra1"> -->
         <div class="barra1">
             <button id="filtrado" title="Filtro" onClick="">Filtrado</button>
         </div>
-        <!--<div id = "vert">
-            <button id="filtrado">Filtrado</button>
-        </div>-->
-        <!--<hr id = "barra_vertical">-->
         <div class="filBusc2">
             <button id="configuracion" title="Configuración de usuario" (click)="conf()">Configuración</button>
         </div>
-        <!--<hr id ="barra2"> -->
     </div>
     <div class="contingut">
         <div class="menuLateral">
             <ul class="">
                 <div class="menuGran">
-                    <h2 class="menu_item" routerLink="/dashboard">Menu   <!--toggleSubmenu($event)-->
+                    <h2 class="menu_item" (click)="openMenu()"> <!--@if (menuOpen == true){ -->
+                        Menu
                         <ul class="submenu">
                             <li ID="sintes">Sintetizadores</li>
                             <li ID="empresa">Empresas</li>
@@ -49,8 +44,8 @@
                         </ul>
                     </h2>
                     <h2 class="menu-item">Listas</h2>
-                    <h2 class="menu-item" (click)="greet()">Crear</h2> <!--toggleSubmenu($event)-->
-                    <h2 class="menu_item3">Sonidos</h2> <!--toggleSubmenu($event)-->
+                    <h2 class="menu-item" (click)="greet()">Crear</h2> 
+                    <h2 class="menu_item3">Sonidos</h2> 
                 </div>
             </ul>
         </div>
@@ -65,20 +60,14 @@
         </div>
     </div>    
 
-    <!--<script src="app.component.ts"></script> -->
     <footer>
         <div class="footer">
             <button type="button" class = "btnPri" onClick="">Política de privacidad</button>
             <button type="button" class = "btnAce" onClick="">Acerca de Sintedia</button>
             <button type="button" class = "btnCod" onClick="">Código de conducta</button>
-            <!-- 
-            <div class="logoFotter">
-                <img class="logoFot" src="">
-            </div> -->
             <img class="logoFot" src="" onClick="">
         </div>
     </footer>
 </body>
-<!--<div [ngClass]="condition ? 'green' : 'red'">Hola</div>-->
 <router-outlet></router-outlet>
 
