@@ -1,17 +1,8 @@
-package com.sintedia.appsintes.bean;
-
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+package com.sintedia.appsintes.dto;
 
 import java.time.LocalDate;
 
-@Document(collection = "articles")
-public class Articles {
-
-    @Id
-    private int id;
-
+public class ArticlesDto {
     private String titol;
 
     private String descripcio;
@@ -25,26 +16,17 @@ public class Articles {
     private LocalDate date;
 
 
-    public Articles() {
+    public ArticlesDto() {
 
     }
 
-    public Articles(int id, String titol, String descripcio, String categoria, String subcategoria, String autor, LocalDate date) {
-        this.id = id;
+    public ArticlesDto(String titol, String descripcio, String categoria, String subcategoria, String autor, LocalDate date) {
         this.titol = titol;
         this.descripcio = descripcio;
         this.categoria = categoria;
         this.subcategoria = subcategoria;
         this.autor = autor;
         this.date = date;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getTitol() {
@@ -93,18 +75,5 @@ public class Articles {
 
     public void setDate(LocalDate date) {
         this.date = date;
-    }
-
-    @Override
-    public String toString() {
-        return "Articles{" +
-                "id=" + id +
-                ", titol='" + titol + '\'' +
-                ", descripcio='" + descripcio + '\'' +
-                ", categoria='" + categoria + '\'' +
-                ", subcategoria='" + subcategoria + '\'' +
-                ", autor='" + autor + '\'' +
-                ", date=" + date +
-                '}';
     }
 }
