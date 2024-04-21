@@ -5,7 +5,6 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-acerca-de-sintedia',
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet],
   templateUrl: './acerca-de-sintedia.component.html',
   styleUrl: './acerca-de-sintedia.component.css'

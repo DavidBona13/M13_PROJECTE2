@@ -2,12 +2,13 @@ import { AfterViewInit, ChangeDetectionStrategy, Component } from '@angular/core
 import { RouterOutlet } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { InicioComponent } from './inicio/inicio.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterOutlet],
+  imports: [CommonModule, RouterOutlet, InicioComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
