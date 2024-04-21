@@ -16,6 +16,19 @@ export class AppComponent { //implements AfterViewInit
   condition = true;
   text = '';
   title = 'SINTEDIA';
+
+  conf() {
+    alert('Ahora mismo la configuración no está activada');
+  }
+  greet() {
+    alert('Debes iniciar sesión para crear artículos!');
+  }
+
+  menuOpen: boolean = false;
+
+  toggleMenu() {
+    this.menuOpen = true;
+  }
 /*
   submenuOpen = false;
   

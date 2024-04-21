@@ -31,7 +31,7 @@
         </div>-->
         <!--<hr id = "barra_vertical">-->
         <div class="filBusc2">
-            <button id="configuracion" title="Configuración de usuario" onClick="">Configuración</button>
+            <button id="configuracion" title="Configuración de usuario" (click)="conf()">Configuración</button>
         </div>
         <!--<hr id ="barra2"> -->
     </div>
@@ -49,7 +49,7 @@
                         </ul>
                     </h2>
                     <h2 class="menu-item">Listas</h2>
-                    <h2 class="menu-item">Crear</h2> <!--toggleSubmenu($event)-->
+                    <h2 class="menu-item" (click)="greet()">Crear</h2> <!--toggleSubmenu($event)-->
                     <h2 class="menu_item3">Sonidos</h2> <!--toggleSubmenu($event)-->
                 </div>
             </ul>
