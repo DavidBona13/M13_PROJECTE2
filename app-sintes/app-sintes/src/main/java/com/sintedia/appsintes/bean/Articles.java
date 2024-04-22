@@ -16,27 +16,27 @@ public class Articles {
 
     private String descripcio;
 
+    private String autor;
+
+    private String date;
+
     private String categoria;
 
     private String subcategoria;
-
-    private String autor;
-
-    private LocalDate date;
 
 
     public Articles() {
 
     }
 
-    public Articles(int id, String titol, String descripcio, String autor, LocalDate date, String categoria, String subcategoria) {
+    public Articles(int id, String titol, String descripcio, String autor, String date, String categoria, String subcategoria) {
         this.id = id;
         this.titol = titol;
         this.descripcio = descripcio;
         this.autor = autor;
         this.date = date;
         this.categoria = categoria;
-        this.subcategoria = "";
+        this.subcategoria = subcategoria;
     }
 
     public int getId() {
@@ -63,6 +63,22 @@ public class Articles {
         this.descripcio = descripcio;
     }
 
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public String getCategoria() {
         return categoria;
     }
@@ -79,32 +95,16 @@ public class Articles {
         this.subcategoria = subcategoria;
     }
 
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
     @Override
     public String toString() {
         return "Articles{" +
                 "id=" + id +
                 ", titol='" + titol + '\'' +
                 ", descripcio='" + descripcio + '\'' +
+                ", autor='" + autor + '\'' +
+                ", date='" + date + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", subcategoria='" + subcategoria + '\'' +
-                ", autor='" + autor + '\'' +
-                ", date=" + date +
                 '}';
     }
 }

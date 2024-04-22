@@ -2,6 +2,8 @@ package com.sintedia.appsintes.service;
 
 import com.sintedia.appsintes.bean.Articles;
 import com.sintedia.appsintes.dto.ArticlesDto;
+import com.sintedia.appsintes.exceptions.AttributeException;
+import com.sintedia.appsintes.exceptions.ResourceNotFoundException;
 import com.sintedia.appsintes.repository.ArticlesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,22 +22,30 @@ public class ArticlesService {
     }
 
 
-    public Articles getArticle(int id) {
-        return articlesRepository.findById(id).get();
+    public Articles getArticle(int id) throws ResourceNotFoundException {
+        return articlesRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("not found"));
     }
 
     public List<Articles> getArticleCategoria(String categoria){
         return articlesRepository.findByCategoria(categoria);
     }
 
-    public Articles saveArticle(ArticlesDto articleDto){
+    public Articles saveArticle(ArticlesDto articleDto) throws AttributeException {
+        if(articlesRepository.existByTitol(articleDto.getTitol())){
+            throw new AttributeException("name already in use");
+        }
         int id = autoIncrement();
         Articles article = new Articles(id,  articleDto.getTitol(), articleDto.getDescripcio(), articleDto.getAutor(), articleDto.getDate(), articleDto.getCategoria(), articleDto.getSubcategoria());
         return articlesRepository.save(article);
     }
 
-    public Articles updateArticle(int id, ArticlesDto articleDto){
-        Articles article = articlesRepository.findById(id).get();
+    public Articles updateArticle(int id, ArticlesDto articleDto) throws ResourceNotFoundException, AttributeException {
+        Articles article = articlesRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("not found"));
+        if(articlesRepository.existByTitol(articleDto.getTitol()) && articlesRepository.findByTitol(articleDto.getTitol()).get().getId() != id){
+            throw new AttributeException("name not exist");
+        }
         article.setTitol(articleDto.getTitol());
         article.setDescripcio(articleDto.getDescripcio());
         article.setAutor(articleDto.getAutor());
@@ -45,8 +55,9 @@ public class ArticlesService {
         return articlesRepository.save(article);
     }
 
-    public Articles deleteArticles(int id){
-        Articles article = articlesRepository.findById(id).get();
+    public Articles deleteArticles(int id) throws ResourceNotFoundException {
+        Articles article = articlesRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("not found"));
         articlesRepository.delete(article);
         return article;
     }
