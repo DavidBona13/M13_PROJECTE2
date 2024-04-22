@@ -7,26 +7,26 @@ public class ArticlesDto {
 
     private String descripcio;
 
+    private String autor;
+
+    private String date;
+
     private String categoria;
 
     private String subcategoria;
-
-    private String autor;
-
-    private LocalDate date;
 
 
     public ArticlesDto() {
 
     }
 
-    public ArticlesDto(String titol, String descripcio, String categoria, String subcategoria, String autor, LocalDate date) {
+    public ArticlesDto(String titol, String descripcio, String autor, String date, String categoria, String subcategoria) {
         this.titol = titol;
         this.descripcio = descripcio;
-        this.categoria = categoria;
-        this.subcategoria = subcategoria;
         this.autor = autor;
         this.date = date;
+        this.categoria = categoria;
+        this.subcategoria = "";
     }
 
     public String getTitol() {
@@ -45,6 +45,22 @@ public class ArticlesDto {
         this.descripcio = descripcio;
     }
 
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public String getCategoria() {
         return categoria;
     }
@@ -59,21 +75,5 @@ public class ArticlesDto {
 
     public void setSubcategoria(String subcategoria) {
         this.subcategoria = subcategoria;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
     }
 }
