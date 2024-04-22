@@ -24,9 +24,13 @@ public class ArticlesService {
         return articlesRepository.findById(id).get();
     }
 
+    public List<Articles> getArticleCategoria(String categoria){
+        return articlesRepository.findByCategoria(categoria);
+    }
+
     public Articles saveArticle(ArticlesDto articleDto){
         int id = autoIncrement();
-        Articles article = new Articles(id,  articleDto.getTitol(), articleDto.getDescripcio(), articleDto.getCategoria(), articleDto.getSubcategoria(), articleDto.getAutor(), articleDto.getDate());
+        Articles article = new Articles(id,  articleDto.getTitol(), articleDto.getDescripcio(), articleDto.getAutor(), articleDto.getDate(), articleDto.getCategoria(), articleDto.getSubcategoria());
         return articlesRepository.save(article);
     }
 
@@ -34,10 +38,10 @@ public class ArticlesService {
         Articles article = articlesRepository.findById(id).get();
         article.setTitol(articleDto.getTitol());
         article.setDescripcio(articleDto.getDescripcio());
-        article.setCategoria(articleDto.getCategoria());
-        article.setSubcategoria(articleDto.getSubcategoria());
         article.setAutor(articleDto.getAutor());
         article.setDate(articleDto.getDate());
+        article.setCategoria(articleDto.getCategoria());
+        article.setSubcategoria(articleDto.getSubcategoria());
         return articlesRepository.save(article);
     }
 

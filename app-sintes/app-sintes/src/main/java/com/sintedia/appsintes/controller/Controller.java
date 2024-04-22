@@ -19,43 +19,37 @@ public class Controller {
     @Autowired
     ArticlesService articleService;
 
-    @GetMapping
+    @GetMapping("/obtenerArticulos")
     public ResponseEntity<List<Articles>> getAll() {
         return ResponseEntity.ok(articleService.getAll());
     }
 
 
-    @GetMapping("/{id}")
+    @GetMapping("/articleId/{id}")
     public ResponseEntity<Articles> getOne(@PathVariable("id") int id) {
         return ResponseEntity.ok(articleService.getArticle(id));
     }
 
+    @GetMapping("/categoria/{categoria}")
+    public ResponseEntity<List<Articles>> getCategoria(@PathVariable("categoria") String categoria){
+        return ResponseEntity.ok(articleService.getArticleCategoria(categoria));
+    }
 
-    @PostMapping
+
+    @PostMapping("/insertarArticle")
     public ResponseEntity<Articles> save(@RequestBody ArticlesDto dto){
         return ResponseEntity.ok(articleService.saveArticle(dto));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/updateArticle/{id}")
     public ResponseEntity<Articles> update(@PathVariable("id") int id, @RequestBody ArticlesDto dto){
         return ResponseEntity.ok(articleService.updateArticle(id, dto));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deleteArticle/{id}")
     public ResponseEntity<Articles> delete(@PathVariable("id") int id){
         return ResponseEntity.ok(articleService.deleteArticles(id));
     }
 
 
-    public List<Articles> getArticles(){
-        return null;
-    }
-
-    public ResponseEntity<Articles> insertArticle(Articles article){
-        return null;
-    }
-
-    public ResponseEntity<Articles> deleteArticle(int id){
-        return null;
-    }
 }
