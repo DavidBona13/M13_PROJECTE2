@@ -29,14 +29,14 @@ public class Articles {
 
     }
 
-    public Articles(int id, String titol, String descripcio, String categoria, String subcategoria, String autor, LocalDate date) {
+    public Articles(int id, String titol, String descripcio, String autor, LocalDate date, String categoria, String subcategoria) {
         this.id = id;
         this.titol = titol;
         this.descripcio = descripcio;
-        this.categoria = categoria;
-        this.subcategoria = subcategoria;
         this.autor = autor;
         this.date = date;
+        this.categoria = categoria;
+        this.subcategoria = "";
     }
 
     public int getId() {
