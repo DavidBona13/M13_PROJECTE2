@@ -1,73 +1,39 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8" />
-</head>
 <body class="bodyWeb">
-    <header class="headerDalt">@if(title){
-        <h1 class="titol">{{title}}</h1>
-        <div id="h1">
-            <button id="registrarse" class="bruno-ace-regular" title="Regístrate" routerLink="/dashboard/registro">Registrarse</button>
-            <button id="iniciarSesion" class="bruno-ace-regular" title="Iniciar sesión" onClick="">Iniciar Sesión</button>
-        </div>
-        <div class ="divBuscador">
-            <div class="divImg">
-                <img ID="imageBuscador" src="./assets/buscar.png">
-            </div>
-            <div class="divInput">
-                <input type="text" id="buscador" name="buscar" placeholder="buscar..." title="Buscar" onClick="">
-            </div>
-            <div class = "divBuscar">
-                <button id="buscarButon" title="Boton de buscar" onClick="">Buscar</button>
-            </div>
-        </div>
-    }</header>
+
+    <app-header />
+    
     <div class="filtBusc">
         <div class="barra1">
             <button id="filtrado" title="Filtro" onClick="">Filtrado</button>
         </div>
         <div class="filBusc2">
-            <button id="configuracion" title="Configuración de usuario" (click)="conf()">Configuración</button>
+            <button id="configuracion" title="Configuración de usuario" onClick="">Configuración</button>
         </div>
     </div>
     <div class="contingut">
         <div class="menuLateral">
             <ul class="">
                 <div class="menuGran">
-                    <h2 class="menu_item" (click)="openMenu()"> <!--@if (menuOpen == true){ -->
-                        Menu
+                    <h2 class="menu_item" routerLink="/dashboard">Menu <!--toggleSubmenu($event)-->
                         <ul class="submenu">
-                            <li ID="sintes">Sintetizadores</li>
-                            <li ID="empresa">Empresas</li>
-                            <li ID="musica">Música</li>
-                            <li ID="diseny">Diseño Sonoro</li>
-                            <li ID="historia">Historia</li>
+                            <li id="sintes"><a routerLink="/sintetizadores1">Sintetizadores</a></li>
+                            <li id="empresa"><a routerLink="/sintetizadores1">Empresas</a></li>
+                            <li id="musica"><a href="#">Música</a></li>
+                            <li id="diseny"><a href="#">Diseño Sonoro</a></li>
+                            <li id="historia"><a href="#">Historia</a></li>
                         </ul>
                     </h2>
-                    <h2 class="menu-item">Listas</h2>
-                    <h2 class="menu-item" (click)="greet()">Crear</h2> 
-                    <h2 class="menu_item3">Sonidos</h2> 
+                    <h2 class="menu-item"><a href="pagina-1.component.html">Listas</a></h2>
+                    <h2 class="menu-item">Crear</h2> <!--toggleSubmenu($event)-->
+                    <h2 class="menu-item">Sonidos</h2> <!--toggleSubmenu($event)-->
                 </div>
             </ul>
         </div>
-        <div class="articles">
-            <div class="art1">
-                <img ID="im1" src="./assets/KorgOPsix.jpeg">
-                <div class = "textArticle">
-                    <h3 ID="titolArt1"> Korg Opsix</h3>
-                    <p ID="iniciArticle">Korg opsix es un sintetizador digital con síntesis FM rediseñada para un uso más único y flexible, fabricado el año 2020.</p>
-                </div>
-            </div>
-        </div>
-    </div>    
 
-    <footer>
-        <div class="footer">
-            <button type="button" class = "btnPri" onClick="">Política de privacidad</button>
-            <button type="button" class = "btnAce" onClick="">Acerca de Sintedia</button>
-            <button type="button" class = "btnCod" onClick="">Código de conducta</button>
-            <img class="logoFot" src="" onClick="">
+        <div>
+            <router-outlet></router-outlet>
         </div>
-    </footer>
+    </div>
+    
+    <app-footer />
 </body>
-<router-outlet></router-outlet>
-
