@@ -1,0 +1,39 @@
+.footer {
+    margin-top: 0px;
+    height: 40px;
+    background-color: #1F1F1F;
+    color: #FFF7D1;
+    display:flexbox;
+    border-top:3px solid #FFF7D1;
+    /*border:1px solid #FFF7D1;*/
+}
+
+.btnPri{
+    margin-top: 10px;
+    margin-left: 90px;
+
+}
+
+.btnAce {
+    margin-top: 10px;
+    margin-left: 300px;
+}
+
+.btnCod{
+    margin-top: 10px;
+    margin-left:  300px;
+}
+
+.logoFotter{
+    border-left: 3px solid #FFF7D1;
+    width: 100px;
+    height: 50px;
+    margin-left: 1230px;
+}
+
+.lofoFot {
+    border-left: 3px solid #FFF7D1;
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+}

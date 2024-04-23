@@ -11,5 +11,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './sintetizadores-1.component.css'
 })
 export class Sintetizadores1Component {
+  title = 'SINTEDIA'
 
 }
