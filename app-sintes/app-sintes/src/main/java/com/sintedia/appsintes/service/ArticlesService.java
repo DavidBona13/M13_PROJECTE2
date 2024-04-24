@@ -32,7 +32,7 @@ public class ArticlesService {
     }
 
     public Articles saveArticle(ArticlesDto articleDto) throws AttributeException {
-        if(articlesRepository.existByTitol(articleDto.getTitol())){
+        if(articlesRepository.existsByTitol(articleDto.getTitol())){
             throw new AttributeException("name already in use");
         }
         int id = autoIncrement();
@@ -43,7 +43,7 @@ public class ArticlesService {
     public Articles updateArticle(int id, ArticlesDto articleDto) throws ResourceNotFoundException, AttributeException {
         Articles article = articlesRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("not found"));
-        if(articlesRepository.existByTitol(articleDto.getTitol()) && articlesRepository.findByTitol(articleDto.getTitol()).get().getId() != id){
+        if(articlesRepository.existsByTitol(articleDto.getTitol()) && articlesRepository.findByTitol(articleDto.getTitol()).get().getId() != id){
             throw new AttributeException("name not exist");
         }
         article.setTitol(articleDto.getTitol());

@@ -5,12 +5,16 @@ import { CommonModule } from '@angular/common';
 import { InicioComponent } from './inicio/inicio.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
+import { RegistroComponent } from './registro/registro.component';
+import { AcercaDeSintediaComponent } from './acerca-de-sintedia/acerca-de-sintedia.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent, IniciarSesionComponent, RegistroComponent, AcercaDeSintediaComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

@@ -10,6 +10,6 @@ import java.util.Optional;
 @Repository
 public interface ArticlesRepository extends MongoRepository<Articles, Integer> {
     List<Articles> findByCategoria(String categoria);
-    boolean existByTitol(String titol);
+    boolean existsByTitol(String titol);
     Optional<Articles> findByTitol(String name);
 }
