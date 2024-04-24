@@ -9,12 +9,21 @@ import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.componen
 import { RegistroComponent } from './registro/registro.component';
 import { AcercaDeSintediaComponent } from './acerca-de-sintedia/acerca-de-sintedia.component';
 import { RouterLink } from '@angular/router';
+import { Crear1Component } from './crear-1/crear-1.component';
+import { Crear2Component } from './crear-2/crear-2.component';
+import { Crear3Component } from './crear-3/crear-3.component';
+import { SonidosComponent } from './sonidos/sonidos.component';
+import { Sintetizadores1Component } from './sintetizadores-1/sintetizadores-1.component';
+import { Sintetizadores2Component } from './sintetizadores-2/sintetizadores-2.component';
+import { Sintetizadores3Component } from './sintetizadores-3/sintetizadores-3.component';
+import { Listas1Component } from './listas-1/listas-1.component';
+import { Listas2Component } from './listas-2/listas-2.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent, IniciarSesionComponent, RegistroComponent, AcercaDeSintediaComponent, RouterLink],
+  imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent, IniciarSesionComponent, RegistroComponent, AcercaDeSintediaComponent, RouterLink, SonidosComponent, Crear1Component, Listas1Component],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

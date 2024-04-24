@@ -1,40 +1,3 @@
-
-.headerDalt {
-    color: #FFF7D1;
-    background-color: #1F1F1F;
-}
-
-.registroClass {
-    margin: 0;
-    padding: 0;
-    color: #FFF7D1;
-    background-color: #1F1F1F;
-}
-
-h1 {
-    color: #FFF7D1;
-    width: 100%;
-}
-.titol {
-    margin-left: 15px;
-}
-
-.rayaInici {
-    border-bottom: 3px solid #FFF7D1;
-    height: 90px;
-    background-color: #1F1F1F;
-    display: flex;
-    width: 100%;
-    /*position: relative;*/
-}
-
-
-#h1 {
-    display:flex;
-    margin-top: -60px;
-}
-
-
 .contingut {
     display: flex;
     width: 100%;
@@ -45,49 +8,6 @@ h1 {
 .letras {
     width: 100%;
     height: 100%;
-}
-
-.footer {
-    margin-top: 0px;
-    height: 40px;
-    background-color: #1F1F1F;
-    color: #FFF7D1;
-    display:flexbox;
-    border-top:3px solid #FFF7D1;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-.btnPri{
-    margin-top: 10px;
-    margin-left: 90px;
-
-}
-
-.btnAce {
-    margin-top: 10px;
-    margin-left: 300px;
-}
-
-.btnCod{
-    margin-top: 10px;
-    margin-left:  300px;
-}
-
-.logoFotter{
-    border-left: 3px solid #FFF7D1;
-    width: 100px;
-    height: 50px;
-    margin-left: 1230px;
-}
-
-.lofoFot {
-    border-left: 3px solid #FFF7D1;
-    width: 100px;
-    height: 40px;
-    margin-left: 10px;
 }
 
 #titolR {
