@@ -8,6 +8,12 @@ import { Sintetizadores3Component } from './sintetizadores-3/sintetizadores-3.co
 import { RegistroComponent } from './registro/registro.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 import { AcercaDeSintediaComponent } from './acerca-de-sintedia/acerca-de-sintedia.component';
+import { Crear1Component } from './crear-1/crear-1.component';
+import { Crear2Component } from './crear-2/crear-2.component';
+import { Crear3Component } from './crear-3/crear-3.component';
+import { Listas1Component } from './listas-1/listas-1.component';
+import { Listas2Component } from './listas-2/listas-2.component';
+import { SonidosComponent } from './sonidos/sonidos.component';
 
 
 export const routes: Routes = [
@@ -17,7 +23,13 @@ export const routes: Routes = [
     { path: 'sintetizadores3', component: Sintetizadores3Component},
     { path: 'register', component: RegistroComponent},
     { path: 'iniciarSesion', component: IniciarSesionComponent},
-    { path: 'acerca-de-sintedia', component: AcercaDeSintediaComponent}
+    { path: 'acerca-de-sintedia', component: AcercaDeSintediaComponent},
+    { path: 'crear1', component: Crear1Component},
+    { path: 'crear2', component: Crear2Component},
+    { path: 'crear3', component: Crear3Component},
+    { path: 'listas1', component: Listas1Component },
+    { path: 'listas2', component: Listas2Component},
+    { path:'sonidos', component: SonidosComponent}
 ];
 
 @NgModule({
