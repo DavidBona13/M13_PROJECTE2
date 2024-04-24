@@ -11,5 +11,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './iniciar-sesion.component.css'
 })
 export class IniciarSesionComponent {
+  title = 'SINTEDIA'
 
 }
