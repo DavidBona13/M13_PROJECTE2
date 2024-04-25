@@ -19,11 +19,13 @@ import { Sintetizadores3Component } from './sintetizadores-3/sintetizadores-3.co
 import { Listas1Component } from './listas-1/listas-1.component';
 import { Listas2Component } from './listas-2/listas-2.component';
 
-@Component({
+@Component({  
   selector: 'app-root',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent, IniciarSesionComponent, RegistroComponent, AcercaDeSintediaComponent, RouterLink, SonidosComponent, Crear1Component, Listas1Component],
+  imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent, 
+            IniciarSesionComponent, RegistroComponent, AcercaDeSintediaComponent, RouterLink, 
+            SonidosComponent, Crear1Component, Listas1Component],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -39,38 +41,4 @@ export class AppComponent { //implements AfterViewInit
     alert('Debes iniciar sesión para crear artículos!');
   }
 
-  menuOpen: boolean = false;
-
-  openMenu() {
-    this.menuOpen = true;
-  }
-/*
-  submenuOpen = false;
-  
-  toggleSubmenu(event: MouseEvent) {
-    this.submenuOpen = !this.submenuOpen;
-    event.stopPropagation(); // Para evitar que el click se propague a otros elementos*/
-  }
-
-  /*
-  ngAfterViewInit() {
-    const menuItems = document.querySelectorAll('.menu-item');
-
-    menuItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        const submenu = item.querySelector('.submenu') as HTMLElement;
-
-        if (submenu) {
-          const computedStyle = window.getComputedStyle(submenu);
-          const displayValue = computedStyle.getPropertyValue('display');
-
-          if (displayValue === 'block') {
-            submenu.style.display = 'none';
-          } else {
-            submenu.style.display = 'block';
-          }
-        }
-      });
-    });
-  }
-}*/
+}
