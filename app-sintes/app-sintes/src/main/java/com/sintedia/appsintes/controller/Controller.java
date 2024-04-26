@@ -3,10 +3,14 @@ package com.sintedia.appsintes.controller;
 
 import com.sintedia.appsintes.bean.Articles;
 import com.sintedia.appsintes.dto.ArticlesDto;
+import com.sintedia.appsintes.dto.MessageDto;
 import com.sintedia.appsintes.exceptions.AttributeException;
 import com.sintedia.appsintes.exceptions.ResourceNotFoundException;
 import com.sintedia.appsintes.service.ArticlesService;
+import jakarta.validation.Valid;
+import org.apache.logging.log4j.message.Message;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,18 +41,24 @@ public class Controller {
 
 
     @PostMapping("/insertarArticle")
-    public ResponseEntity<Articles> save(@RequestBody ArticlesDto dto) throws AttributeException {
-        return ResponseEntity.ok(articleService.saveArticle(dto));
+    public ResponseEntity<MessageDto> save(@Valid @RequestBody ArticlesDto dto) throws AttributeException {
+        Articles article = articleService.saveArticle(dto);
+        String message = "El artículo " + article.getTitol() + " ha sido guardado. ";
+        return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
     }
 
     @PutMapping("/updateArticle/{id}")
-    public ResponseEntity<Articles> update(@PathVariable("id") int id, @RequestBody ArticlesDto dto) throws ResourceNotFoundException, AttributeException {
-        return ResponseEntity.ok(articleService.updateArticle(id, dto));
+    public ResponseEntity<MessageDto> update(@PathVariable("id") int id, @Valid @RequestBody ArticlesDto dto) throws ResourceNotFoundException, AttributeException {
+        Articles article = articleService.updateArticle(id, dto);
+        String message = "El artículo " + article.getTitol() + " ha sido actualizado. ";
+        return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
     }
 
     @DeleteMapping("/deleteArticle/{id}")
-    public ResponseEntity<Articles> delete(@PathVariable("id") int id) throws ResourceNotFoundException {
-        return ResponseEntity.ok(articleService.deleteArticles(id));
+    public ResponseEntity<MessageDto> delete(@PathVariable("id") int id) throws ResourceNotFoundException {
+        Articles article = articleService.deleteArticles(id);
+        String message = "El artículo " + article.getTitol() + " ha sido eliminado. ";
+        return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
     }
 
 
