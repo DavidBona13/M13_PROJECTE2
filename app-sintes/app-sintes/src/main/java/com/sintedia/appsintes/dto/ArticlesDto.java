@@ -1,16 +1,24 @@
 package com.sintedia.appsintes.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 import java.time.LocalDate;
 
 public class ArticlesDto {
+
+    @NotBlank(message = "El título es oblgatorio")
     private String titol;
 
+    @NotBlank(message = "La descripción es obligatoria")
     private String descripcio;
 
+    @NotBlank(message = "El autor es obligatorio")
     private String autor;
 
+    @NotBlank(message = "La fecha es obligatoria")
     private String date;
 
+    @NotBlank(message = "La categoria es obligatoria")
     private String categoria;
 
     private String subcategoria;
