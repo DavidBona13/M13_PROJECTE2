@@ -29,7 +29,8 @@ export const routes: Routes = [
     { path: 'crear3', component: Crear3Component},
     { path: 'listas1', component: Listas1Component },
     { path: 'listas2', component: Listas2Component},
-    { path:'sonidos', component: SonidosComponent}
+    { path:'sonidos', component: SonidosComponent},
+    { path: "**", redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
