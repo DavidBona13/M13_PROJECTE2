@@ -25,8 +25,7 @@ public class Controller {
     public ResponseEntity<List<Articles>> getAll() {
         return ResponseEntity.ok(articleService.getAll());
     }
-
-
+    
     @GetMapping("/articleId/{id}")
     public ResponseEntity<Articles> getOne(@PathVariable("id") int id) throws ResourceNotFoundException {
         return ResponseEntity.ok(articleService.getArticle(id));
@@ -37,6 +36,26 @@ public class Controller {
         return ResponseEntity.ok(articleService.getArticleCategoria(categoria));
     }
 
+    @GetMapping("/catisubcat/{categoria}/{subcategoria}")
+    public ResponseEntity<List<Articles>> getcatISubcat(@PathVariable("categoria") String categoria,
+                                                        @PathVariable ("subcategoria") String subcategoria){
+        return ResponseEntity.ok(articleService.getArtByCatISubcat(categoria, subcategoria));
+    }
+
+    @GetMapping("/subcategoria/{subcategoria}")
+    public ResponseEntity<List<Articles>> getSubcat(@PathVariable("subcategoria") String subcategoria){
+        return ResponseEntity.ok(articleService.getArtBySubcat(subcategoria));
+    }
+
+    @GetMapping("/latest20art")
+    public ResponseEntity<List<Articles>> get20LatestArt(){
+        return ResponseEntity.ok(articleService.getLast20Art());
+    }
+
+    @GetMapping("/latest20categoria/{categoria}")
+    public ResponseEntity<List<Articles>> get20Latestcategoria(@PathVariable("categoria") String categoria){
+        return ResponseEntity.ok(articleService.findLatest20ArticlesByCategoria(categoria));
+    }
 
     @PostMapping("/insertarArticle")
     public ResponseEntity<MessageDto> save(@Valid @RequestBody ArticlesDto dto) throws AttributeException {

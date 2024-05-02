@@ -1,44 +1,20 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8" />
-</head>
-<body class="registroClass">
-    <header class="headerDalt">@if(title){
-        <h1 class="titol">{{title}}</h1>
-        <div id="h1">
-        </div>
-    }</header>
-    <div class="rayaInici">
+<div class="contingut">
+    <div class="letras">
+        <h2 ID="titolR">REGISTRARSE:</h2>
+        <h3 ID="txtUser">Usuario:</h3>
+        <h3 ID="txtPass">Contraseña:</h3>
+        <h3 ID="txtNewPass">Repite la contraseña:</h3>
+        <h3 ID="txtMail">mail:</h3>
     </div>
-    <div class="contingut">
-        <div class="letras">
-            <h2 ID="titolR">REGISTRARSE:</h2>
-            <h3 ID="txtUser">Usuario:</h3>
-            <h3 ID="txtPass">Contraseña:</h3>
-            <h3 ID="txtNewPass">Repite la contraseña:</h3>
-            <h3 ID="txtMail">mail:</h3>
-        </div>
-        <div class="inputsRegister">
-            <input ID="inUser" type="text" placeholder="usuario">
-            <br>
-            <input ID="inPass" type="password" placeholder="PASSWORD">
-            <br>
-            <input ID="inPass2" type="password" placeholder="PASSWORD">
-            <br>
-            <input ID="inMail" type="text" placeholder="mail">
-            <br>
-            <button ID="btnRegister" type="button" onclick="">Registrarse</button>
-        </div>
-    </div> 
-
-    <footer>
-        <div class="footer"> 
-            <button type="button" class = "btnPri" onClick="">Política de privacidad</button>
-            <button type="button" class = "btnAce" onClick="">Acerca de Sintedia</button>
-            <button type="button" class = "btnCod" onClick="">Código de conducta</button>
-            <img class="logoFot" src="" onClick="">
-        </div>
-    </footer>
-</body>
-<!--<div [ngClass]="condition ? 'green' : 'red'">Hola</div>-->
-<router-outlet></router-outlet>
+    <div class="inputsRegister">
+        <input ID="inUser" type="text" placeholder="usuario">
+        <br>
+        <input ID="inPass" type="password" placeholder="PASSWORD">
+        <br>
+        <input ID="inPass2" type="password" placeholder="PASSWORD">
+        <br>
+        <input ID="inMail" type="text" placeholder="mail">
+        <br>
+        <button ID="btnRegister" type="button" onclick="">Registrarse</button>
+    </div>
+</div>

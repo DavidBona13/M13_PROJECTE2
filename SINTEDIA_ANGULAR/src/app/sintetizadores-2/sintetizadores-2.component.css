@@ -1,17 +1,20 @@
 
 .articles {
-    height: 700px;
+    height: 100%;
     width: 1265px;
-    background-color: #2D2B2D;
 }
 
 .art1{
     display: flex;
     border: 3px solid #FFF7D1;
-    margin-top: 50px;
     margin-left: 75px;
     width: 1050px;
     height: 110px;
+}
+
+#itEmpresa {
+    margin-left: 75px;
+    margin-top: 30px;
 }
 
 #im1 {

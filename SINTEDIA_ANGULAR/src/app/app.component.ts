@@ -26,7 +26,8 @@ import { CodigoDeConductaComponent } from './codigo-de-conducta/codigo-de-conduc
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent, 
             IniciarSesionComponent, RegistroComponent, AcercaDeSintediaComponent, RouterLink, 
-            SonidosComponent, Crear1Component, Listas1Component, CodigoDeConductaComponent],
+            SonidosComponent, Crear1Component, Listas1Component, CodigoDeConductaComponent, Sintetizadores2Component, Sintetizadores1Component,
+            Sintetizadores3Component],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
