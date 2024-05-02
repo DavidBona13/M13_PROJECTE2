@@ -14,6 +14,7 @@ import { Crear3Component } from './crear-3/crear-3.component';
 import { Listas1Component } from './listas-1/listas-1.component';
 import { Listas2Component } from './listas-2/listas-2.component';
 import { SonidosComponent } from './sonidos/sonidos.component';
+import { CodigoDeConductaComponent } from './codigo-de-conducta/codigo-de-conducta.component';
 
 
 export const routes: Routes = [
@@ -30,6 +31,8 @@ export const routes: Routes = [
     { path: 'listas1', component: Listas1Component },
     { path: 'listas2', component: Listas2Component},
     { path:'sonidos', component: SonidosComponent},
+    { path: 'conducta', component: CodigoDeConductaComponent},
+    { path: 'acerca', component: AcercaDeSintediaComponent},
     { path: "**", redirectTo: '', pathMatch: 'full'}
 ];
 

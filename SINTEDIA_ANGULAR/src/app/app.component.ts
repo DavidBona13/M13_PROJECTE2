@@ -18,6 +18,7 @@ import { Sintetizadores2Component } from './sintetizadores-2/sintetizadores-2.co
 import { Sintetizadores3Component } from './sintetizadores-3/sintetizadores-3.component';
 import { Listas1Component } from './listas-1/listas-1.component';
 import { Listas2Component } from './listas-2/listas-2.component';
+import { CodigoDeConductaComponent } from './codigo-de-conducta/codigo-de-conducta.component';
 
 @Component({  
   selector: 'app-root',
@@ -25,7 +26,7 @@ import { Listas2Component } from './listas-2/listas-2.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent, 
             IniciarSesionComponent, RegistroComponent, AcercaDeSintediaComponent, RouterLink, 
-            SonidosComponent, Crear1Component, Listas1Component],
+            SonidosComponent, Crear1Component, Listas1Component, CodigoDeConductaComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
