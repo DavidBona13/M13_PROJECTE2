@@ -37,8 +37,8 @@ h1 {
 
 .contingut {
     display: flex;
-    width: 100%;
-    height: 590px;
+    width: 1265px;
+    height: 100%;
     background-color: #2D2B2D;
 }
 
@@ -48,6 +48,7 @@ h1 {
 }
 
 .inputsRegister {
+    margin-top: 44px;
     width: 50%;
     height: 75%;
 }
@@ -100,8 +101,8 @@ h1 {
 #titolR {
     color: #FFF7D1;
     /*text-decoration: underline;*/
-    margin-top: 40px;
-    margin-left: 200px;
+    margin-top: 80px;
+    margin-left: 100px;
     text-decoration: none; /* Elimina el subrayado predeterminado */
     background-image: linear-gradient(to right, #FFF7D1, #2D2B2D); /* Gradiente lineal */
     background-position: 0 100%; /* Ubicación del gradiente */

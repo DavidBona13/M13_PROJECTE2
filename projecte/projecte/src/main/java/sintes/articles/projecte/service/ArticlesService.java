@@ -1,6 +1,8 @@
 package sintes.articles.projecte.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import sintes.articles.projecte.bean.Articles;
 import sintes.articles.projecte.dto.ArticlesDto;
@@ -20,7 +22,6 @@ public class ArticlesService {
     public List<Articles> getAll() {
         return articlesRepository.findAll();
     }
-
 
     public Articles getArticle(int id) throws ResourceNotFoundException {
         return articlesRepository.findById(id)
@@ -62,7 +63,22 @@ public class ArticlesService {
         return article;
     }
 
+    public List<Articles> getArtByCatISubcat(String categoria, String subcategoria ){
+        return articlesRepository.findArticleByCatandSubcat(categoria, subcategoria);
+    }
 
+    public List<Articles> getArtBySubcat(String subcategoria){
+        return articlesRepository.findArticleBySubcategoria(subcategoria);
+    }
+
+    public List<Articles> getLast20Art(){
+        return articlesRepository.findLatest20Articles();
+    }
+
+    public List<Articles> findLatest20ArticlesByCategoria(String categoria) {
+        Pageable pageable = PageRequest.of(0, 20);
+            return articlesRepository.findLatest20ArticlesByCategoriaOrderByFechaDesc(categoria, pageable);
+    }
 
     private int autoIncrement () {
         List<Articles> articles = articlesRepository.findAll();
