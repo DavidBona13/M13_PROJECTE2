@@ -1,0 +1,89 @@
+
+.headerDalt {
+    color: #FFF7D1;
+    background-color: #1F1F1F;
+}
+
+.registroClass {
+    margin: 0;
+    padding: 0;
+    color: #FFF7D1;
+    background-color: #1F1F1F;
+}
+
+h1 {
+    color: #FFF7D1;
+    width: 100%;
+}
+.titol {
+    margin-left: 15px;
+}
+
+.rayaInici {
+    border-bottom: 3px solid #FFF7D1;
+    height: 90px;
+    background-color: #1F1F1F;
+    display: flex;
+    width: 100%;
+    /*position: relative;*/
+}
+
+
+#h1 {
+    display:flex;
+    margin-top: -60px;
+}
+
+
+.contingut {
+    display: flex;
+    width: 1265px;
+    height: 100%;
+    background-color: #2D2B2D;
+}
+
+.letras {
+    width: 50%;
+    height: 75%;
+}
+
+.inputsRegister {
+    display: flex;
+    margin-top: 44px;
+    width: 50%;
+    height: 75%;
+}
+
+#titolR {
+    color: #FFF7D1;
+    /*text-decoration: underline;*/
+    margin-top: 80px;
+    margin-left: 100px;
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    background-image: linear-gradient(to right, #FFF7D1, #2D2B2D); /* Gradiente lineal */
+    background-position: 0 100%; /* Ubicación del gradiente */
+    background-repeat: repeat-x; /* Repetir solo horizontalmente */
+    background-size: auto 1px; /* Tamaño de la línea degradada */
+    padding-bottom: 1px; /* Espacio para la línea */
+    line-height: 1;
+}
+
+#inpNom {
+    color: #1F1F1F;
+    margin-top: 50px;
+    margin-left: 200px;
+    width: 200px;
+    height: 20px;
+    border-radius: 20px;
+    border: 1px solid #FFF7D1;
+}
+
+#btnRegister {
+    color: #1F1F1F;
+    margin-top: 45px;
+    width: 100px;
+    height: 40px;
+    margin-left: 50px;
+    background-color: #FFF7D1;
+    border-radius: 20px;
+}

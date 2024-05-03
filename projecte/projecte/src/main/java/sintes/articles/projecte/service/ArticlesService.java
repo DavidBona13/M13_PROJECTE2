@@ -77,7 +77,7 @@ public class ArticlesService {
 
     public List<Articles> findLatest20ArticlesByCategoria(String categoria) {
         Pageable pageable = PageRequest.of(0, 20);
-            return articlesRepository.findLatest20ArticlesByCategoriaOrderByFechaDesc(categoria, pageable);
+        return articlesRepository.findLatest20ArticlesByCategoriaOrderByFechaDesc(categoria, pageable);
     }
 
     private int autoIncrement () {

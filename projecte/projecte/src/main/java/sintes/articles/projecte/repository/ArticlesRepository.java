@@ -21,6 +21,7 @@ public interface ArticlesRepository extends MongoRepository<Articles, Integer> {
     @Query("{subcategoria: '?0'}")
     List<Articles> findArticleBySubcategoria(String subcategoria);
 
+    @Query("{ $query: {}, $orderby: { _id : -1 }, $limit: 20 }")
     List<Articles> findLatest20Articles();
 
     @Query("{categoria: '?0'}")
