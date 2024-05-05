@@ -46,7 +46,7 @@ public class Controller {
     public ResponseEntity<List<Articles>> getSubcat(@PathVariable("subcategoria") String subcategoria){
         return ResponseEntity.ok(articleService.getArtBySubcat(subcategoria));
     }
-
+/*
     @GetMapping("/latest20art")
     public ResponseEntity<List<Articles>> get20LatestArt(){
         return ResponseEntity.ok(articleService.getLast20Art());
@@ -55,7 +55,7 @@ public class Controller {
     @GetMapping("/latest20categoria/{categoria}")
     public ResponseEntity<List<Articles>> get20Latestcategoria(@PathVariable("categoria") String categoria){
         return ResponseEntity.ok(articleService.findLatest20ArticlesByCategoria(categoria));
-    }
+    }*/
 
     @PostMapping("/insertarArticle")
     public ResponseEntity<MessageDto> save(@Valid @RequestBody ArticlesDto dto) throws AttributeException {
