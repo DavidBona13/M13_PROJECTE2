@@ -87,3 +87,10 @@ h1 {
     background-color: #FFF7D1;
     border-radius: 20px;
 }
+
+.llistes {
+    display:flex;
+    overflow-y: auto; 
+    max-height: 600px;
+    border-color: 1px solid #FFF7D1;
+}
