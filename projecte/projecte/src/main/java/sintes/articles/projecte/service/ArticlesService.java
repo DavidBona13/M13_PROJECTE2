@@ -70,7 +70,7 @@ public class ArticlesService {
     public List<Articles> getArtBySubcat(String subcategoria){
         return articlesRepository.findArticleBySubcategoria(subcategoria);
     }
-/*
+
     public List<Articles> getLast20Art(){
         return articlesRepository.findLatest20Articles();
     }
@@ -78,7 +78,7 @@ public class ArticlesService {
     public List<Articles> findLatest20ArticlesByCategoria(String categoria) {
         Pageable pageable = PageRequest.of(0, 20);
         return articlesRepository.findLatest20ArticlesByCategoriaOrderByFechaDesc(categoria, pageable);
-    }*/
+    }
 
     private int autoIncrement () {
         List<Articles> articles = articlesRepository.findAll();
