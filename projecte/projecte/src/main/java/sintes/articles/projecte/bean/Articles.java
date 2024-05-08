@@ -21,6 +21,9 @@ public class Articles {
 
     private String subcategoria;
 
+    private int id_user;
+
+
 
     public Articles() {
 
@@ -90,6 +93,14 @@ public class Articles {
 
     public void setSubcategoria(String subcategoria) {
         this.subcategoria = subcategoria;
+    }
+
+    public int getId_user(){
+        return id_user;
+    }
+
+    public void setId_user(int id_user){
+        this.id_user = id_user;
     }
 
     @Override
