@@ -37,7 +37,7 @@ public class ArticlesService {
             throw new AttributeException("name already in use");
         }
         int id = autoIncrement();
-        Articles article = new Articles(id,  articleDto.getTitol(), articleDto.getDescripcio(), articleDto.getAutor(), articleDto.getDate(), articleDto.getCategoria(), articleDto.getSubcategoria());
+        Articles article = new Articles(id,  articleDto.getTitol(), articleDto.getDescripcio(), articleDto.getAutor(), articleDto.getDate(), articleDto.getCategoria(), articleDto.getSubcategoria(), articleDto.getImgURL());
         return articlesRepository.save(article);
     }
 

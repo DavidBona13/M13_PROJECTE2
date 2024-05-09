@@ -5,6 +5,8 @@ import { NgModel } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { Articles } from '../model/Articles';
 import { ServicesComponent } from '../services/services.component';
+import { throwError, timeout } from 'rxjs';
+import { ToastService } from 'path/to/toast.service';
 
 
 @Component({
@@ -19,28 +21,24 @@ import { ServicesComponent } from '../services/services.component';
 export class InicioComponent implements OnInit {
   articles: Articles[] = [];
 
-  constructor(private servicesComponent: ServicesComponent,
-              private toast: ToastService
-  ) {}
+  constructor(
+    private servicesComponent: ServicesComponent,
+    private toast: ToastService
+  ) { }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-/*
-  ngOnInit(): void {
-    this.get
   }
 
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    this.ServicesComponent.list().subscribe(
+  getArticles(): void {
+    this.servicesComponent.list().subscribe(
       (data: Articles[]) => {
         this.articles = data;
         console.log(this.articles);
       },
-      (error) => {
-        console.log(error);
+      error => {
+        // Manejar el error
+        this.toast.error(error.message, "Error", { timeOut: 3000, positionClass: "toast-top-center"});
+        return throwError(error); // Propagar el error para que pueda ser manejado en el componente que llama a getArticles
       }
-    )
-  }*/
+    );
+  }
 }
