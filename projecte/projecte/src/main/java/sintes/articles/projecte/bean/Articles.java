@@ -23,13 +23,15 @@ public class Articles {
 
     private int id_user;
 
+    private String imgURL;
+
 
 
     public Articles() {
 
     }
 
-    public Articles(int id, String titol, String descripcio, String autor, String date, String categoria, String subcategoria) {
+    public Articles(int id, String titol, String descripcio, String autor, String date, String categoria, String subcategoria, String imgURL) {
         this.id = id;
         this.titol = titol;
         this.descripcio = descripcio;
@@ -37,6 +39,7 @@ public class Articles {
         this.date = date;
         this.categoria = categoria;
         this.subcategoria = subcategoria;
+        this.imgURL = imgURL;
     }
 
     public int getId() {
@@ -103,6 +106,14 @@ public class Articles {
         this.id_user = id_user;
     }
 
+    public String getImgURL(){
+        return imgURL;
+    }
+
+    public void setImgURL(String imgURL){
+        this.imgURL = imgURL;
+    }
+
     @Override
     public String toString() {
         return "Articles{" +
@@ -113,6 +124,7 @@ public class Articles {
                 ", date='" + date + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", subcategoria='" + subcategoria + '\'' +
+                ", imgURL='" + imgURL + '\'' +
                 '}';
     }
 }

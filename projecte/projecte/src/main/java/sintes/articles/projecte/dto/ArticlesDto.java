@@ -23,18 +23,22 @@ public class ArticlesDto {
 
     private int id_user;
 
+    @NotBlank(message = "La imatge es obligatoria")
+    private String imgURL;
+
 
     public ArticlesDto() {
 
     }
 
-    public ArticlesDto(String titol, String descripcio, String autor, String date, String categoria, String subcategoria) {
+    public ArticlesDto(String titol, String descripcio, String autor, String date, String categoria, String subcategoria, String imgURL) {
         this.titol = titol;
         this.descripcio = descripcio;
         this.autor = autor;
         this.date = date;
         this.categoria = categoria;
         this.subcategoria = "";
+        this.imgURL = imgURL;
     }
 
     public String getTitol() {
@@ -91,6 +95,14 @@ public class ArticlesDto {
 
     public void setId_user(int id_user){
         this.id_user = id_user;
+    }
+
+    public String getImgURL(){
+        return imgURL;
+    }
+
+    public void setImgURL(String imgURL){
+        this.imgURL = imgURL;
     }
 }
 

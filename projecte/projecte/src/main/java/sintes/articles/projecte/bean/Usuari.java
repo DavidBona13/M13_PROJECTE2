@@ -17,16 +17,18 @@ public class Usuari {
     private String pwd;
 
     private List<Articles> llista_articles_creats;
+    private List<Llistes> llistes_creades;
 
     public Usuari() {
     }
 
-    public Usuari(int id, String nom, String email, String pwd, List<Articles> llista_articles_creats) {
+    public Usuari(int id, String nom, String email, String pwd, List<Articles> llista_articles_creats, List<Llistes> llistes_creades) {
         this.id = id;
         this.nom = nom;
         this.email = email;
         this.pwd = pwd;
         this.llista_articles_creats = llista_articles_creats;
+        this.llistes_creades = llistes_creades;
     }
 
     public int getId() {
@@ -68,4 +70,8 @@ public class Usuari {
     public void setLlista_articles_creats(List<Articles> llista_articles_creats) {
         this.llista_articles_creats = llista_articles_creats;
     }
+
+    public List<Llistes> getLlistes_creades(){ return llistes_creades; }
+
+    public void setLlistes_creades(List<Llistes> llistes_creades){ this.llistes_creades = llistes_creades; }
 }
