@@ -7,5 +7,5 @@ import sintes.articles.projecte.bean.Llistes;
 
 @Repository
 public interface LlistesRepository extends MongoRepository<Llistes, Integer> {
-    boolean existsByNom_llista(String nomLlista);
+    boolean existsByNomLlista(String nom_llista);
 }

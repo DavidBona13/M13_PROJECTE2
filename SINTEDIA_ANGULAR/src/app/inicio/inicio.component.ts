@@ -1,44 +1,54 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Sintetizadores1Component } from '../sintetizadores-1/sintetizadores-1.component';
-import { NgModel } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { Articles } from '../model/Articles';
+import { ChangeDetectionStrategy, Component, OnInit, OnDestroy } from '@angular/core';
 import { ServicesComponent } from '../services/services.component';
-import { throwError, timeout } from 'rxjs';
-import { ToastService } from 'path/to/toast.service';
-
+import { Articles } from '../model/Articles';
+import { ToastrService } from 'ngx-toastr';
+import { Subject, throwError } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterOutlet, Sintetizadores1Component],
   templateUrl: './inicio.component.html',
-  styleUrl: './inicio.component.css'
+  styleUrls: ['./inicio.component.css'],
+  imports: [CommonModule]
 })
 
-export class InicioComponent implements OnInit {
+export class InicioComponent implements OnInit, OnDestroy {
   articles: Articles[] = [];
+  private unsubscribe$ = new Subject<void>(); // Subject para notificar la finalización
 
   constructor(
-    private servicesComponent: ServicesComponent,
-    private toast: ToastService
+    private httpClient: HttpClient,
+    private servicesComponent: ServicesComponent, // Inyecta ServicesComponent aquí
+    private toast: ToastrService
   ) { }
+
   ngOnInit(): void {
+    this.getArticles();
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 
   getArticles(): void {
-    this.servicesComponent.list().subscribe(
-      (data: Articles[]) => {
-        this.articles = data;
-        console.log(this.articles);
-      },
-      error => {
-        // Manejar el error
-        this.toast.error(error.message, "Error", { timeOut: 3000, positionClass: "toast-top-center"});
-        return throwError(error); // Propagar el error para que pueda ser manejado en el componente que llama a getArticles
-      }
-    );
+    this.servicesComponent.list()
+      .pipe(
+        takeUntil(this.unsubscribe$) // Desuscribirse cuando se complete el Subject
+      )
+      .subscribe(
+        (data: Articles[]) => {
+          this.articles = data;
+          console.log(this.articles);
+        },
+        error => {
+          this.toast.error(error.message, "Error", { timeOut: 3000, positionClass: "toast-top-center"});
+          return throwError(error); 
+        }
+      );
   }
 }

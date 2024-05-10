@@ -124,7 +124,6 @@ public class Articles {
                 ", date='" + date + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", subcategoria='" + subcategoria + '\'' +
-                ", imgURL='" + imgURL + '\'' +
                 '}';
     }
 }

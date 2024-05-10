@@ -12,19 +12,19 @@ public class Llistes {
     @Id
     private int id;
 
-    private String nom_llista;
+    private String nomLlista;
 
-    private List<Integer> lista_articles;
+    private List<Integer> listaArticles;
 
     private int id_user;
 
     public Llistes() {
     }
 
-    public Llistes(int id, String nom_llista, List<Integer> lista_articles, int id_user) {
+    public Llistes(int id, String nomLlista, List<Integer> listaArticles, int id_user) {
         this.id = id;
-        this.nom_llista = nom_llista;
-        this.lista_articles = lista_articles;
+        this.nomLlista = nomLlista;
+        this.listaArticles = listaArticles;
         this.id_user = id_user;
     }
 
@@ -36,20 +36,20 @@ public class Llistes {
         this.id = id;
     }
 
-    public String getNom_llista() {
-        return nom_llista;
+    public String getNomLlista() {
+        return nomLlista;
     }
 
-    public void setNom_llista(String nom_llista) {
-        this.nom_llista = nom_llista;
+    public void setNomLlista(String nomLlista) {
+        this.nomLlista = nomLlista;
     }
 
-    public List<Integer> getLista_articles() {
-        return lista_articles;
+    public List<Integer> getListaArticles() {
+        return listaArticles;
     }
 
-    public void setLista_articles(List<Integer> lista_articles) {
-        this.lista_articles = lista_articles;
+    public void setListaArticles(List<Integer> listaArticles) {
+        this.listaArticles = listaArticles;
     }
 
     public int getId_user() {

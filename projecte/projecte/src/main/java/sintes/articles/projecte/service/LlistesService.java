@@ -32,11 +32,11 @@ public class LlistesService {
 
     public Llistes saveLlista(Llistes llista) throws AttributeException
     {
-        if(llistaRepository.existsByNom_llista(llista.getNom_llista())){
+        if(llistaRepository.existsByNomLlista(llista.getNomLlista())){
             throw new AttributeException("name already in use");
         }
         int id = autoIncrement();
-        Llistes llistes = new Llistes(id, llista.getNom_llista(), llista.getLista_articles(), llista.getId_user());
+        Llistes llistes = new Llistes(id, llista.getNomLlista(), llista.getListaArticles(), llista.getId_user());
         return llistaRepository.save(llistes);
     }
 
@@ -45,7 +45,7 @@ public class LlistesService {
         Optional<Llistes> list = llistaRepository.findById(llista.getId());
         if(list.isPresent()){
             Llistes list2 = list.get();
-            List<Integer> listBucle = list2.getLista_articles();
+            List<Integer> listBucle = list2.getListaArticles();
             for(Integer idArticle : listBucle){
                 if (idArticle == id_article){
                     listBucle.remove(idArticle);
