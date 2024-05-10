@@ -36,14 +36,14 @@ public class ControllerList {
     @PostMapping("/addLlista")
     public ResponseEntity<MessageDto> insertLlista(@Valid @RequestBody Llistes llista) throws AttributeException {
         Llistes llista2 = llistesService.saveLlista(llista);
-        String message = "El artículo " + llista2.getNom_llista() + " ha sido guardado. ";
+        String message = "El artículo " + llista2.getNomLlista() + " ha sido guardado. ";
         return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
     }
 
     @DeleteMapping("/deleteArtList/{id}")
     public ResponseEntity<MessageDto> deleteArtLlista2(@PathVariable("id") int id, @Valid @RequestBody Llistes llista) throws AttributeException {
         Llistes llista2 = (Llistes) llistesService.deleteArtLlista(id, llista);
-        String message = "La lista " + llista2.getNom_llista() + " ha sido eliminado. ";
+        String message = "La lista " + llista.getNomLlista() + " ha sido eliminado. ";
         return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
     }
 

@@ -8,11 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ServicesComponent {
+
   articleURL= 'http://localhost:8080' + '/articles/latest20art'; 
 
-    constructor(private httpClient: HttpClient){}
+  constructor(private httpClient: HttpClient){}
 
-    public list(): Observable<Articles[]>{
-      return this.httpClient.get<Articles[]>(this.articleURL);
-    }
+  public list(): Observable<Articles[]>{
+    return this.httpClient.get<Articles[]>(this.articleURL);
+  }
 }

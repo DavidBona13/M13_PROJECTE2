@@ -1,8 +1,7 @@
-<article class="art1">
+<article *ngFor="let article of articles" class="art1">
     <img ID="im1" src="./assets/KorgOPsix.jpeg">
     <div class="textArticle">
-        <h3 ID="titolArt1"> Korg Opsix</h3>
-        <p ID="iniciArticle">Korg opsix es un sintetizador digital con síntesis FM rediseñada para un uso más único y
-            flexible, fabricado el año 2020.</p>
+        <h3 ID="titolArt1">{{article.titol}}</h3>
+        <p ID="iniciArticle"><{{article.descripcio}}></p>
     </div>
 </article>
