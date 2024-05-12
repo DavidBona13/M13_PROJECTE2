@@ -10,6 +10,7 @@ import sintes.articles.projecte.exceptions.AttributeException;
 import sintes.articles.projecte.exceptions.ResourceNotFoundException;
 import sintes.articles.projecte.repository.LlistesRepository;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -40,6 +41,21 @@ public class LlistesService {
         return llistaRepository.save(llistes);
     }
 
+    public Llistes addArticleToList(int llistaId, int articleId) throws ResourceNotFoundException, AttributeException {
+
+        Llistes llista = getById(llistaId);
+        
+        if (llista.getListaArticles() == null) {
+            llista.setListaArticles(new ArrayList<>());
+        }
+        if (llista.getListaArticles().contains(articleId)) {
+            throw new AttributeException("El artículo ya está en la lista");
+        }
+        llista.getListaArticles().add(articleId);
+
+        return llistaRepository.save(llista);
+    }
+
     public List<Llistes> deleteArtLlista(int id_article, Llistes llista) throws AttributeException
     {
         Optional<Llistes> list = llistaRepository.findById(llista.getId());
@@ -58,6 +74,21 @@ public class LlistesService {
             throw new AttributeException("list not exist");
         }
     }
+    /*
+    *  public Llistes removeArticleFromList(int listaId, int articuloId) throws ResourceNotFoundException {
+        Llistes lista = getById(listaId);
+
+        // Verificar si el artículo está en la lista
+        if (!lista.getListaArticles().contains(articuloId)) {
+            throw new AttributeException("El artículo no está en la lista");
+        }
+
+        // Remover el artículo de la lista
+        lista.getListaArticles().remove(Integer.valueOf(articuloId));
+
+        // Guardar la lista actualizada
+        return llistesRepository.save(lista);
+    }*/
 
     private int autoIncrement () {
         List<Llistes> llistes = llistaRepository.findAll();
