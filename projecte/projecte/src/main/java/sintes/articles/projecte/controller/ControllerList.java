@@ -40,6 +40,19 @@ public class ControllerList {
         return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
     }
 
+    @PutMapping("/addArtToList/{llistaId}/{articleId}")
+    public ResponseEntity<MessageDto> addArticleALlista(@PathVariable("llistaId") int llistaId, @PathVariable("articleId") int articleId){
+        try {
+            Llistes listaActualizada = llistesService.addArticleToList(llistaId, articleId);
+            String message = "Artículo " + articleId + " agregado a la lista " + llistaId;
+            return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new MessageDto(HttpStatus.NOT_FOUND, "Lista no encontrada con el ID: " + llistaId));
+        } catch (AttributeException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new MessageDto(HttpStatus.BAD_REQUEST, e.getMessage()));
+        }
+    }
+
     @DeleteMapping("/deleteArtList/{id}")
     public ResponseEntity<MessageDto> deleteArtLlista2(@PathVariable("id") int id, @Valid @RequestBody Llistes llista) throws AttributeException {
         Llistes llista2 = (Llistes) llistesService.deleteArtLlista(id, llista);

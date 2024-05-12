@@ -21,7 +21,6 @@ export class InicioComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>(); // Subject para notificar la finalización
 
   constructor(
-    private httpClient: HttpClient,
     private servicesComponent: ServicesComponent, // Inyecta ServicesComponent aquí
     private toast: ToastrService
   ) { }
@@ -38,7 +37,7 @@ export class InicioComponent implements OnInit, OnDestroy {
   getArticles(): void {
     this.servicesComponent.list()
       .pipe(
-        takeUntil(this.unsubscribe$) // Desuscribirse cuando se complete el Subject
+        takeUntil(this.unsubscribe$)
       )
       .subscribe(
         (data: Articles[]) => {

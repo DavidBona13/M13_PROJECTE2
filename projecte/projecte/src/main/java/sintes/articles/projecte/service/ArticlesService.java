@@ -5,6 +5,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import sintes.articles.projecte.bean.Articles;
+import sintes.articles.projecte.bean.Usuari;
 import sintes.articles.projecte.dto.ArticlesDto;
 import sintes.articles.projecte.exceptions.AttributeException;
 import sintes.articles.projecte.exceptions.ResourceNotFoundException;
@@ -38,6 +39,7 @@ public class ArticlesService {
         }
         int id = autoIncrement();
         Articles article = new Articles(id,  articleDto.getTitol(), articleDto.getDescripcio(), articleDto.getAutor(), articleDto.getDate(), articleDto.getCategoria(), articleDto.getSubcategoria(), articleDto.getImgURL());
+        //Usuari usuari = usuariService.getUsuariById(dto.getUserId());
         return articlesRepository.save(article);
     }
 
