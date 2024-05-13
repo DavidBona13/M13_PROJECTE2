@@ -74,4 +74,16 @@ public class Usuari {
     public List<Llistes> getLlistes_creades(){ return llistes_creades; }
 
     public void setLlistes_creades(List<Llistes> llistes_creades){ this.llistes_creades = llistes_creades; }
+
+    @Override
+    public String toString() {
+        return "Usuari{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", email='" + email + '\'' +
+                ", pwd='" + pwd + '\'' +
+                ", llista_articles_creats=" + llista_articles_creats +
+                ", llistes_creades=" + llistes_creades +
+                '}';
+    }
 }

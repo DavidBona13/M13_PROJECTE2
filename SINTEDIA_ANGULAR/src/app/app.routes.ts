@@ -15,6 +15,7 @@ import { Listas1Component } from './listas-1/listas-1.component';
 import { Listas2Component } from './listas-2/listas-2.component';
 import { SonidosComponent } from './sonidos/sonidos.component';
 import { CodigoDeConductaComponent } from './codigo-de-conducta/codigo-de-conducta.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 export const routes: Routes = [

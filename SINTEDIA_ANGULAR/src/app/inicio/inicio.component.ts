@@ -6,6 +6,7 @@ import { Subject, throwError } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -13,15 +14,15 @@ import { HttpClient } from '@angular/common/http';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, RouterLink]
 })
 
 export class InicioComponent implements OnInit, OnDestroy {
   articles: Articles[] = [];
-  private unsubscribe$ = new Subject<void>(); // Subject para notificar la finalización
+  private unsubscribe$ = new Subject<void>(); 
 
   constructor(
-    private servicesComponent: ServicesComponent, // Inyecta ServicesComponent aquí
+    private servicesComponent: ServicesComponent,
     private toast: ToastrService
   ) { }
 
@@ -50,4 +51,12 @@ export class InicioComponent implements OnInit, OnDestroy {
         }
       );
   }
+
+  limitText(text: string, limit: number): string {
+    const words = text.split(' ');
+    if (words.length > limit) {
+        return words.slice(0, limit).join(' ') + '...';
+    }
+    return text;
+}
 }

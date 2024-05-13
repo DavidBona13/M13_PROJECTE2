@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from 'express';
 
 @Component({
   selector: 'app-empresa1',
   standalone: true,
-  imports: [RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './empresa1.component.html',
   styleUrl: './empresa1.component.css'
 })
