@@ -59,4 +59,14 @@ public class Llistes {
     public void setId_user(int id_user) {
         this.id_user = id_user;
     }
+
+    @Override
+    public String toString() {
+        return "Llistes{" +
+                "id=" + id +
+                ", nomLlista='" + nomLlista + '\'' +
+                ", listaArticles=" + listaArticles +
+                ", id_user=" + id_user +
+                '}';
+    }
 }

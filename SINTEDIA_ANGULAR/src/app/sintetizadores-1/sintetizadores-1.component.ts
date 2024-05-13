@@ -14,5 +14,4 @@ import { RouterLink } from '@angular/router';
 })
 export class Sintetizadores1Component {
   title = 'SINTEDIA'
-
 }

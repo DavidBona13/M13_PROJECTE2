@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class ServicesComponent {
 
   articleURL= 'http://localhost:8080' + '/articles/latest20art'; 
+  //articleURL= 'http://localhost:8080' + '/articles/latest20art'; 
 
   constructor(private httpClient: HttpClient){}
 
