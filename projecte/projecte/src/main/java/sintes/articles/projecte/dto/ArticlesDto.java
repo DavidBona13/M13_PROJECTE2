@@ -21,6 +21,7 @@ public class ArticlesDto {
 
     private String subcategoria;
 
+    @NotBlank(message = "El usuario debe ser obligatorio")
     private int id_user;
 
     @NotBlank(message = "La imatge es obligatoria")
