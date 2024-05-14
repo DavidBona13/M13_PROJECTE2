@@ -1,5 +1,5 @@
 <article *ngFor="let article of articles" class="art1">
-    <img ID="im1" src="./assets/KorgOPsix.jpeg">
+    <img ID="im1" src="{{article.imgURL}}">
     <div class="textArticle">
         <h3 ID="titolArt1"><a routerLink=""> {{article.titol}} </a></h3>
         <p ID="iniciArticle">{{ limitText(article.descripcio, 40) }}</p>
