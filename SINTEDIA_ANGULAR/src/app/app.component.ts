@@ -19,6 +19,7 @@ import { Sintetizadores3Component } from './sintetizadores-3/sintetizadores-3.co
 import { Listas1Component } from './listas-1/listas-1.component';
 import { Listas2Component } from './listas-2/listas-2.component';
 import { CodigoDeConductaComponent } from './codigo-de-conducta/codigo-de-conducta.component';
+import { Empresa1Component } from './empresa1/empresa1.component';
 
 @Component({  
   selector: 'app-root',
@@ -27,7 +28,7 @@ import { CodigoDeConductaComponent } from './codigo-de-conducta/codigo-de-conduc
   imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent, 
             IniciarSesionComponent, RegistroComponent, AcercaDeSintediaComponent, RouterLink, 
             SonidosComponent, Crear1Component, Listas1Component, CodigoDeConductaComponent, Sintetizadores2Component, Sintetizadores1Component,
-            Sintetizadores3Component],
+            Sintetizadores3Component, Empresa1Component],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

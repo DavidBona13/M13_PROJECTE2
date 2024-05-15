@@ -1,0 +1,33 @@
+.contingut {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #2D2B2D;
+}
+
+.letras {
+    width: 100%;
+    height: 100%;
+}
+
+#titolR {
+    color: #FFF7D1;
+    /*text-decoration: underline;*/
+    margin-top: 40px;
+    margin-left: 200px;
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    background-image: linear-gradient(to right, #FFF7D1, #2D2B2D); /* Gradiente lineal */
+    background-position: 0 100%; /* Ubicación del gradiente */
+    background-repeat: repeat-x; /* Repetir solo horizontalmente */
+    background-size: auto 1px; /* Tamaño de la línea degradada */
+    padding-bottom: 1px; /* Espacio para la línea */
+    line-height: 1;
+}
+
+#txt1 {
+    margin-top: 25px;
+    color: #FFF7D1;
+    margin-left: 250px;
+    margin-right: 175px;
+    line-height: 1;
+}
