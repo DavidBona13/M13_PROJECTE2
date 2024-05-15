@@ -7,6 +7,7 @@ import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
+import { Sintetizadores3Component } from '../sintetizadores-3/sintetizadores-3.component';
 
 @Component({
   selector: 'app-inicio',
@@ -14,7 +15,7 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css'],
-  imports: [CommonModule, RouterLink]
+  imports: [CommonModule, RouterLink, Sintetizadores3Component]
 })
 
 export class InicioComponent implements OnInit, OnDestroy {
@@ -43,7 +44,6 @@ export class InicioComponent implements OnInit, OnDestroy {
       .subscribe(
         (data: Articles[]) => {
           this.articles = data;
-          console.log(this.articles);
         },
         error => {
           this.toast.error(error.message, "Error", { timeOut: 3000, positionClass: "toast-top-center"});

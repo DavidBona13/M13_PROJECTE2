@@ -16,13 +16,14 @@ import { Listas2Component } from './listas-2/listas-2.component';
 import { SonidosComponent } from './sonidos/sonidos.component';
 import { CodigoDeConductaComponent } from './codigo-de-conducta/codigo-de-conducta.component';
 import { ToastrModule } from 'ngx-toastr';
+import { Empresa1Component } from './empresa1/empresa1.component';
 
 
 export const routes: Routes = [
     { path: '', component: InicioComponent },
     { path: 'sintetizadores1', component: Sintetizadores1Component},
     { path: 'sintetizadores2', component: Sintetizadores2Component},
-    { path: 'sintetizadores3', component: Sintetizadores3Component},
+    { path: 'sintetizadores3/:id', component: Sintetizadores3Component},
     { path: 'register', component: RegistroComponent},
     { path: 'iniciarSesion', component: IniciarSesionComponent},
     { path: 'acerca-de-sintedia', component: AcercaDeSintediaComponent},
@@ -34,6 +35,7 @@ export const routes: Routes = [
     { path:'sonidos', component: SonidosComponent},
     { path: 'conducta', component: CodigoDeConductaComponent},
     { path: 'acerca', component: AcercaDeSintediaComponent},
+    { path: 'empreses1', component: Empresa1Component},
     { path: "**", redirectTo: '', pathMatch: 'full'}
 ];
 
