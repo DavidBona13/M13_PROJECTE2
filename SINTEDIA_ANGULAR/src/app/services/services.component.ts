@@ -1,4 +1,4 @@
-import { Component, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Articles } from '../model/Articles';
 import { HttpClient } from '@angular/common/http';
@@ -9,8 +9,8 @@ import { HttpClient } from '@angular/common/http';
 
 export class ServicesComponent {
 
-  articleURL= 'http://localhost:8080' + '/articles/latest20art'; 
-  articleURLid= 'http://localhost:8080' + '/articles/articleId'; 
+  private articleURL= 'http://localhost:8080' + '/articles/latest20art'; 
+  private articleURLid= 'http://localhost:8080' + '/articles/articleId'; 
 
   constructor(private httpClient: HttpClient){}
 
