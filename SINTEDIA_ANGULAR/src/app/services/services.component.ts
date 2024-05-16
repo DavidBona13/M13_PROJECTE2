@@ -9,8 +9,8 @@ import { HttpClient } from '@angular/common/http';
 
 export class ServicesComponent {
 
-  private articleURL= 'http://localhost:8080' + '/articles/latest20art'; 
-  private articleURLid= 'http://localhost:8080' + '/articles/articleId'; 
+  private articleURL= 'http://localhost:8080/articles/latest20art'; 
+  private articleURLid= 'http://localhost:8080/articles/articleId'; 
 
   constructor(private httpClient: HttpClient){}
 
@@ -19,6 +19,7 @@ export class ServicesComponent {
   }
 
   public artId(id: number): Observable<Articles>{
+    //return this.httpClient.get<Articles>(`${this.articleURLid}/${id}`);
     return this.httpClient.get<Articles>(this.articleURLid + `/${id}`);
   }
 

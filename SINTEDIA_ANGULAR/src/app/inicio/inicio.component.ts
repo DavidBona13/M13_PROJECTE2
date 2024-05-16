@@ -6,8 +6,9 @@ import { Subject, throwError } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink, Router } from '@angular/router';
 import { Sintetizadores3Component } from '../sintetizadores-3/sintetizadores-3.component';
+
 
 @Component({
   selector: 'app-inicio',
@@ -36,7 +37,7 @@ export class InicioComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
-  getArticles(): void {
+ getArticles(): void {
     this.servicesComponent.list()
       .pipe(
         takeUntil(this.unsubscribe$)
@@ -58,5 +59,5 @@ export class InicioComponent implements OnInit, OnDestroy {
         return words.slice(0, limit).join(' ') + '...';
     }
     return text;
-}
+  }
 }

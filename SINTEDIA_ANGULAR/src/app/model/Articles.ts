@@ -1,5 +1,5 @@
 export class Articles {
-    id!: number;
+    id?: number;
     titol: string;
     descripcio: string;
     autor: string;
