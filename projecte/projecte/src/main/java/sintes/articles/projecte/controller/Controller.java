@@ -32,6 +32,11 @@ public class Controller {
         return ResponseEntity.ok(articleService.getArticle(id));
     }
 
+    @GetMapping("/articleTitol/{titol}")
+    public ResponseEntity<Articles> getTitol(@PathVariable("titol") String titol) throws  ResourceNotFoundException{
+        return ResponseEntity.ok(articleService.getArtTitol(titol));
+    }
+
     @GetMapping("/categoria/{categoria}")
     public ResponseEntity<List<Articles>> getCategoria(@PathVariable("categoria") String categoria){
         return ResponseEntity.ok(articleService.getArticleCategoria(categoria));

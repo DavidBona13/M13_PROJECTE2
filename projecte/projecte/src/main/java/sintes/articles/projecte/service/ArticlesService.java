@@ -29,6 +29,11 @@ public class ArticlesService {
                 .orElseThrow(() -> new ResourceNotFoundException("not found"));
     }
 
+    public Articles getArtTitol(String titol) throws  ResourceNotFoundException{
+        return articlesRepository.findByTitol(titol)
+                .orElseThrow(() -> new ResourceNotFoundException("no existe"));
+    }
+
     public List<Articles> getArticleCategoria(String categoria){
         return articlesRepository.findByCategoria(categoria);
     }
