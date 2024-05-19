@@ -5,8 +5,8 @@
     max-height: 4600px;
     margin-top: 5px;
     margin-left: px;
-    width: 1225px;
-    height: 674px;
+    width: 1255px;
+    height: 694px;
     border-color: 2px solid #FFF7D1;
     background-color: #FFF7D1;
 }
@@ -16,7 +16,7 @@
 }
 
 #titolR {
-    color: #FFF7D1;
+    color:black;
     border-color: 3px solid #FFF7D1;
     margin-top: 40px;
     margin-left: 200px;
@@ -24,7 +24,7 @@
 
 #txt1 {
     margin-top: 25px;
-    color: #FFF7D1;
+    color: black;
     margin-left: 250px;
     margin-right: 175px;
 }

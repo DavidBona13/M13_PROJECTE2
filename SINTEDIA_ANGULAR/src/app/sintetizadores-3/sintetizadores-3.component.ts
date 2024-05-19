@@ -11,6 +11,7 @@ import { AppComponent } from '../app.component';
 import { of } from 'rxjs';
 import { IniciarSesionComponent } from '../iniciar-sesion/iniciar-sesion.component';
 
+
 @Component({
   selector: 'app-sintetizadores-3',
   standalone: true,
@@ -19,36 +20,62 @@ import { IniciarSesionComponent } from '../iniciar-sesion/iniciar-sesion.compone
   styleUrls: ['./sintetizadores-3.component.css'],
   imports: [CommonModule, RouterLink, RouterOutlet,  AppComponent, InicioComponent] 
 })
-export class Sintetizadores3Component implements OnInit, OnDestroy {
+export class Sintetizadores3Component implements OnInit {
 
   articles: Articles | undefined;
+  titol: string | undefined;
+  descripcio: string | undefined;
+  
   private unsubscribe$ = new Subject<void>(); 
 
   constructor(
     private articlesService: ServicesComponent,
     private toast: ToastrService,
-    private activatedRoute: ActivatedRoute
+    private route : ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.getArticle();
   }
-
+/*
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
-  }
+  }*/
 
+/*
   getArticle(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
+    this.route.params.subscribe(params => {
+      const id = +params['id']; // Convertir a número
+      this.articlesService.artId(id)
+        .pipe(takeUntil(this.unsubscribe$))
+        .subscribe(
+          data => {
+            this.articles = data;
+            console.log(this.articles);
+          },
+          err => {
+            this.toast.error(err.message, "Error", { timeOut: 3000, positionClass: "toast-top-center" });
+            return throwError(err); 
+          }
+        );
+    });
+  }*/
+
+  getArticleId(): void {
+    idArt : Number;
+    const id = this.route.snapshot.params['id'];
+    this.articlesService.artId(id).subscribe
+  }
+  
+  getArticle(): void {
+    const id = this.route.snapshot.params['id'];
+  
     if (!id) {
       this.toast.error("Invalid article ID", "Error", { timeOut: 3000, positionClass: "toast-top-center" });
       return;
     }
     this.articlesService.artId(id)
-      .pipe(
-        takeUntil(this.unsubscribe$)
-      )
       .subscribe(
         data => {
           this.articles = data;
@@ -58,8 +85,10 @@ export class Sintetizadores3Component implements OnInit, OnDestroy {
           this.toast.error(err.message, "Error", { timeOut: 3000, positionClass: "toast-top-center"});
           return throwError(err); 
         }
+        
       );
   }
+
   /*
   getArticle(): void {
     const titol = this.activatedRoute.snapshot.params['titol'];
