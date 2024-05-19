@@ -1,5 +1,5 @@
 export class Articles {
-    id?: number;
+    id: number;
     titol: string;
     descripcio: string;
     autor: string;
@@ -9,7 +9,8 @@ export class Articles {
     id_user: number;
     imgURL: string;
 
-    constructor(titol: string, descripcio: string, autor: string, date: string, categoria: string, subcategoria: string, id_user: number, imgURL: string){
+    constructor(id: number, titol: string, descripcio: string, autor: string, date: string, categoria: string, subcategoria: string, id_user: number, imgURL: string){
+        this.id = id;
         this.titol = titol;
         this.descripcio = descripcio;
         this.autor = autor;

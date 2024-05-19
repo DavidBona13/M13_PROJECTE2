@@ -202,6 +202,8 @@
     margin-left: 75px;
     width: 1100px;
     height: 110px;
+    overflow-y:auto; 
+    max-height: 4600px;
 }
 
 #im1 {
