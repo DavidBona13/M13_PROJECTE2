@@ -14,6 +14,7 @@ public interface ArticlesRepository extends MongoRepository<Articles, Integer> {
     List<Articles> findByCategoria(String categoria);
     boolean existsByTitol(String titol);
     Optional<Articles> findByTitol(String name);
+    List<Articles> findBySubcategoriaIsNotNullAndSubcategoriaNot(String subcategoria);
 
     @Query("{categoria: '?0', subcategoria: '?1'}")
     List<Articles> findArticleByCatandSubcat(String categoria, String subcategoria);
@@ -27,4 +28,7 @@ public interface ArticlesRepository extends MongoRepository<Articles, Integer> {
 
     @Query("{categoria: '?0'}")
     List<Articles> findLatest20ArticlesByCategoriaOrderByFechaDesc(String categoria, Pageable pageable);
+
+    @Query("{'categoria': 'empresa'}")
+    List<Articles> findByCategoriaEmpresa();
 }

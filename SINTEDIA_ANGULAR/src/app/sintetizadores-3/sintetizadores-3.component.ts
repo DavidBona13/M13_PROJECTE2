@@ -21,7 +21,7 @@ import { AppComponent } from '../app.component';
 export class Sintetizadores3Component implements OnInit {
 
   //articles: Articles | undefined;
-  articles: Articles | undefined = undefined;
+  articles: Articles | undefined;
   titol: string | undefined;
   descripcio: string | undefined;
   

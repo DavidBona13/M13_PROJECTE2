@@ -1,7 +1,7 @@
-<article class="articles" >
+<div *ngFor="let art of articles" class="articles" >
     <div class="art1">
-        <img ID="im1" src="./assets/korg-logo.jpeg" routerLink="/">
-        <h3 ID="titolArt1"> Korg </h3>
+        <img ID="im1" src="{{art.imgURL}}">
+        <h3 ID="titolArt1"> {{art.titol}}</h3>
     </div>
-</article>
+</div>
 

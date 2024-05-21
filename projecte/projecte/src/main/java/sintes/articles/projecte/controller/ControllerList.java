@@ -23,7 +23,7 @@ public class ControllerList {
     @Autowired
     private LlistesService llistesService;
 
-    @GetMapping("/getAll")
+    @GetMapping("/getAllLista")
     public ResponseEntity<List<Llistes>> getAll(){
         return ResponseEntity.ok(llistesService.getAll());
     }
@@ -32,6 +32,7 @@ public class ControllerList {
     public ResponseEntity<Llistes> getLlistaId(@PathVariable("id") int id) throws ResourceNotFoundException {
         return ResponseEntity.ok(llistesService.getById(id));
     }
+
 
     @PostMapping("/addLlista")
     public ResponseEntity<MessageDto> insertLlista(@Valid @RequestBody Llistes llista) throws AttributeException {

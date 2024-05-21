@@ -1,39 +1,39 @@
-<body class="bodyWeb">
+<app-header></app-header>
 
-    <app-header />
-    
-    <div class="filtBusc">
-        <div class="barra1">
-            <button id="filtrado" title="Filtro"> <a routerLink="">Filtrado</a></button>
-        </div>
-        <div class="filBusc2">
-            <button id="configuracion" title="Configuración de usuario">Configuración</button>
-        </div>
+<div class="filtBusc">
+    <div class="barra1">
+        <button id="filtrado" title="Filtro">
+            <a routerLink="">Filtrado</a>
+        </button>
     </div>
-    <div class="contingut">
-        <div class="menuLateral">
-            <ul class="">
-                <div class="menuGran">
-                    <h2 class="menu_item" > <a routerLink=""  >Menu 
-                        <ul class="submenu">
-                            <li id="sintes"><a routerLink="/sintetizadores1">Sintetizadores</a></li>
-                            <li id="empresa"><a routerLink="/empreses1">Empresas</a></li>
-                            <li id="musica"><a >Música</a></li>
-                            <li id="diseny"><a >Diseño Sonoro</a></li>
-                            <li id="historia"><a >Historia</a></li>
-                        </ul>
-                    </a></h2>
-                    <h2 class="menu-item"><a routerLink="listas1">Listas</a></h2>
-                    <h2 class="menu-item"> <a routerLink="/crear1">Crear</a></h2>
-                    <h2 class="menu-item"> <a routerLink="/sonidos">Sonidos</a></h2>
-                </div>
-            </ul>
-        </div>
+    <div class="filBusc2">
+        <button id="configuracion" title="Configuración de usuario">Configuración</button>
+    </div>
+</div>
+<div class="contingut">
+    <div class="menuLateral">
+        <ul class="">
+            <div class="menuGran">
+                <h2 class="menu_item">
+                    <a routerLink="">Menu</a>
+                    <ul class="submenu">
+                        <li id="sintes"><a routerLink="/sintetizadores1">Sintetizadores</a></li>
+                        <li id="empresa"><a routerLink="/empreses1">Empresas</a></li>
+                        <li id="musica"><a>Música</a></li>
+                        <li id="diseny"><a>Diseño Sonoro</a></li>
+                        <li id="historia"><a>Historia</a></li>
+                    </ul>
+                </h2>
+                <h2 class="menu-item"><a routerLink="listas1">Listas</a></h2>
+                <h2 class="menu-item"><a routerLink="/crear1">Crear</a></h2>
+                <h2 class="menu-item"><a routerLink="/sonidos">Sonidos</a></h2>
+            </div>
+        </ul>
+    </div>
 
-        <div class="scrollview1">
-            <router-outlet></router-outlet>
-        </div>
+    <div class="scrollview1">
+        <router-outlet></router-outlet>
     </div>
-    
-    <app-footer></app-footer>
-</body>
+</div>
+
+<app-footer></app-footer>

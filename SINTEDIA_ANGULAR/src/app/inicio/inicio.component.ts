@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, OnDestroy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ServicesComponent } from '../services/services.component';
 import { Articles } from '../model/Articles';
 import { ToastrService } from 'ngx-toastr';
@@ -6,7 +6,8 @@ import { Subject, throwError } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute, RouterLink, Router, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router } from 'express';
 import { Sintetizadores3Component } from '../sintetizadores-3/sintetizadores-3.component';
 import { AppComponent } from '../app.component';
 
@@ -55,9 +56,6 @@ export class InicioComponent implements OnInit {
       );
   }
 
-  navegacion(id: any): void {
-    this.router.navigate(["/sintetizadores3", id]);
-  }
   limitText(text: string, limit: number): string {
     const words = text.split(' ');
     if (words.length > limit) {

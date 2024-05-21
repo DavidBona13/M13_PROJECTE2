@@ -13,6 +13,15 @@ export class ServicesComponent {
   private articleURLid= 'http://localhost:8080/articles/articleId'; 
   private articleTitol = 'http://localhost:8080/articles/articleTitol';
   private subcategoriaURL = 'http://localhost:8080/articles/subcategoria';
+  private categoriaURL = 'http://localhost:8080/articles/getEmpreses';
+ 
+
+
+  //SERVICES LLISTES
+  private llistesURL = 'http://localhost:8080/listas/getAllLista';
+  private llistesId = 'http://localhost:8080/listas/GetById/';
+  private llistesAdd = 'http://localhost:8080/listas/addLlista';
+  private llistesAddArticle = 'http://localhost:8080/listas//addArtToList/';
 
   constructor(private httpClient: HttpClient){}
 
@@ -23,6 +32,10 @@ export class ServicesComponent {
   public artId(id: number): Observable<Articles>{
     //return this.httpClient.get<Articles>(`${this.articleURLid}/${id}`);
     return this.httpClient.get<Articles>(this.articleURLid + `/${id}`);
+  }
+
+  public artCategoria(): Observable<Articles[]> {
+    return this.httpClient.get<Articles[]>(this.categoriaURL);
   }
 
   public getArtTitol(titol: string): Observable<Articles>{
