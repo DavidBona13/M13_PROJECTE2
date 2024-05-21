@@ -1,23 +1,24 @@
 
 
 .articleText {
-    overflow-y:auto; 
+    overflow-y: auto;
     max-height: 4600px;
     margin-top: 5px;
-    margin-left: px;
+    margin-left: 0px; 
     width: 1255px;
     height: 694px;
-    border-color: 2px solid #FFF7D1;
+    border: 2px solid #FFF7D1; 
     background-color: #FFF7D1;
 }
 
+
 #prova {
-    color: black;
+    width: 100px;
+    background-color: #FFF7D1;
 }
 
 #titolR {
     color:black;
-    border-color: 3px solid #FFF7D1;
     margin-top: 40px;
     margin-left: 200px;
 }

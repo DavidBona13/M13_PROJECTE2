@@ -1,7 +1,10 @@
-<article *ngFor="let article of articles" class="art1">
+<div *ngFor="let article of articles" class="art1">
     <img id="im1" src="{{article.imgURL}}">
     <div class="textArticle">
-        <h3 id="titolArt1"><a routerLink="sintetitzadores3/{{article.id}}"> {{article.titol}} </a></h3>
+        <!--<h3 id="titolArt1"><a routerLink="sintetitzadores3/", {{article.id}}> {{article.titol}} </a></h3> -->
+        <!--<h3 id="titolArt1"><a [routerLink]="['sintetitzadores3', article.id]"> {{article.titol}} </a></h3> -->
+        <h3 id="titolArt1"><a routerLink="sintetizadores3/{{article.id}}"> {{article.titol}} </a></h3>
+
         <p id="iniciArticle">{{ limitText(article.descripcio, 40) }}</p>
     </div>
-</article>
+</div>

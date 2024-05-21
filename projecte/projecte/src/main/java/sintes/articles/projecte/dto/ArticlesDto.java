@@ -27,19 +27,23 @@ public class ArticlesDto {
     @NotBlank(message = "La imatge es obligatoria")
     private String imgURL;
 
+    private String imgSubcategoria;
+
+
 
     public ArticlesDto() {
 
     }
 
-    public ArticlesDto(String titol, String descripcio, String autor, String date, String categoria, String subcategoria, String imgURL) {
+    public ArticlesDto(String titol, String descripcio, String autor, String date, String categoria, String subcategoria, String imgURL, String imgSubcategoria) {
         this.titol = titol;
         this.descripcio = descripcio;
         this.autor = autor;
         this.date = date;
         this.categoria = categoria;
-        this.subcategoria = "";
+        this.subcategoria = subcategoria;
         this.imgURL = imgURL;
+        this.imgSubcategoria = imgSubcategoria;
     }
 
     public String getTitol() {
@@ -104,6 +108,14 @@ public class ArticlesDto {
 
     public void setImgURL(String imgURL){
         this.imgURL = imgURL;
+    }
+
+    public String getImgSubcategoria() {
+        return imgSubcategoria;
+    }
+
+    public void setImgSubcategoria(String imgSubcategoria){
+        this.imgSubcategoria = imgSubcategoria;
     }
 }
 
