@@ -12,6 +12,7 @@ export class ServicesComponent {
   private articleURL= 'http://localhost:8080/articles/latest20art'; 
   private articleURLid= 'http://localhost:8080/articles/articleId'; 
   private articleTitol = 'http://localhost:8080/articles/articleTitol';
+  private subcategoriaURL = 'http://localhost:8080/articles/subcategoria';
 
   constructor(private httpClient: HttpClient){}
 
@@ -26,6 +27,10 @@ export class ServicesComponent {
 
   public getArtTitol(titol: string): Observable<Articles>{
     return this.httpClient.get<Articles>(this.articleTitol + `/${titol}`);
+  }
+
+  public getSubcategorias(subcategoria: string): Observable<Articles[]>{
+    return this.httpClient.get<Articles[]>(this.subcategoriaURL + `/${subcategoria}`);
   }
 
 

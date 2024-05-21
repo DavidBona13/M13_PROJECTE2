@@ -37,11 +37,4 @@ export class AppComponent { //implements AfterViewInit
   text = '';
   title = 'SINTEDIA';
 
-  conf() {
-    alert('Ahora mismo la configuración no está activada');
-  }
-  greet() {
-    alert('Debes iniciar sesión para crear artículos!');
-  }
-
 }

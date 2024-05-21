@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, OnDestroy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { Articles } from '../model/Articles';
 import { ServicesComponent } from '../services/services.component';
@@ -8,8 +8,6 @@ import { Subject, throwError } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { InicioComponent } from '../inicio/inicio.component';
 import { AppComponent } from '../app.component';
-import { of } from 'rxjs';
-import { IniciarSesionComponent } from '../iniciar-sesion/iniciar-sesion.component';
 
 
 @Component({
@@ -18,11 +16,12 @@ import { IniciarSesionComponent } from '../iniciar-sesion/iniciar-sesion.compone
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './sintetizadores-3.component.html',
   styleUrls: ['./sintetizadores-3.component.css'],
-  imports: [CommonModule, RouterLink, RouterOutlet,  AppComponent, InicioComponent] 
+  imports: [CommonModule] 
 })
 export class Sintetizadores3Component implements OnInit {
 
-  articles: Articles | undefined;
+  //articles: Articles | undefined;
+  articles: Articles | undefined = undefined;
   titol: string | undefined;
   descripcio: string | undefined;
   
@@ -34,42 +33,37 @@ export class Sintetizadores3Component implements OnInit {
     private route : ActivatedRoute
   ) { }
 
+  /*
   ngOnInit(): void {
-    this.getArticle();
-  }
-/*
-  ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+    this.getArticle(this.articles?.id);
+    console.log(this.articles);
   }*/
 
-/*
-  getArticle(): void {
-    this.route.params.subscribe(params => {
-      const id = +params['id']; // Convertir a número
-      this.articlesService.artId(id)
-        .pipe(takeUntil(this.unsubscribe$))
-        .subscribe(
-          data => {
-            this.articles = data;
-            console.log(this.articles);
-          },
-          err => {
-            this.toast.error(err.message, "Error", { timeOut: 3000, positionClass: "toast-top-center" });
-            return throwError(err); 
-          }
-        );
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      const id = Number(params.get('id'));
+      console.log('Article ID from route:', id);
+      if (id) {
+        this.getArticle(id);
+      }
     });
-  }*/
-
-  getArticleId(): void {
-    idArt : Number;
-    const id = this.route.snapshot.params['id'];
-    this.articlesService.artId(id).subscribe
   }
-  
-  getArticle(): void {
-    const id = this.route.snapshot.params['id'];
+
+  getArticle(id: number): void {
+    this.articlesService.artId(id).subscribe(
+      (data: Articles) => {
+        this.articles = data;
+        console.log(this.articles);
+        console.log('Article data:', this.articles);
+      },
+      error => {
+        console.error('Error fetching article', error);
+      }
+    );
+  }
+/*
+  getArticle(id: any): void {
+    id = this.route.snapshot.params['id'];
   
     if (!id) {
       this.toast.error("Invalid article ID", "Error", { timeOut: 3000, positionClass: "toast-top-center" });
@@ -87,7 +81,7 @@ export class Sintetizadores3Component implements OnInit {
         }
         
       );
-  }
+  }*/
 
   /*
   getArticle(): void {

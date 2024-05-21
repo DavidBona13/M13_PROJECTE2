@@ -17,10 +17,10 @@ import { AppComponent } from '../app.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css'],
-  imports: [CommonModule, RouterLink, Sintetizadores3Component, RouterOutlet, AppComponent]
+  imports: [CommonModule, RouterLink, Sintetizadores3Component, RouterOutlet]
 })
 
-export class InicioComponent implements OnInit, OnDestroy {
+export class InicioComponent implements OnInit {
   articles: Articles[] = [];
   private unsubscribe$ = new Subject<void>(); 
 
@@ -33,11 +33,11 @@ export class InicioComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.getArticles();
   }
-
+/*
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
-  }
+  }*/
 
  getArticles(): void {
     this.servicesComponent.list()
@@ -55,6 +55,9 @@ export class InicioComponent implements OnInit, OnDestroy {
       );
   }
 
+  navegacion(id: any): void {
+    this.router.navigate(["/sintetizadores3", id]);
+  }
   limitText(text: string, limit: number): string {
     const words = text.split(' ');
     if (words.length > limit) {
