@@ -1,13 +1,9 @@
 
-.bodyWeb {
-    margin: 0;
-    padding: 0;
-    color: #FFF7D1;
-    background-color: #1F1F1F;
-}
 .scrollview1 {
     overflow-y:auto; 
     max-height: 4600px;
+    background: radial-gradient(circle at center, rgba(36, 35, 33, 0.692), #1F1F1F);
+    width: 100%;
 }
 
 
@@ -16,15 +12,14 @@
     border-top: 3px solid #FFF7D1;
     border-bottom: 3px solid #FFF7D1;
     height: 70px;
+    width: 100%;
     color: #FFF7D1;
     background-color: #1F1F1F;
     display: flex;
-    margin-top: 25px;
     /*position: relative;*/
 }
 
 .filBusc2 {
-    display: flex;
     width: 210px;
     height: 68px;
     margin-top: 0px;
@@ -33,7 +28,6 @@
 }
 
 .barra1 {
-    display: flex;
     width: 150px;
     height: 68px;
     margin-top: 0px;
@@ -63,7 +57,7 @@
     border-bottom: 1px solid #FFF7D1;
     border-top: 1px solid #FFF7D1;
     border-left: 3px solid #1F1F1F;
-    border-right: 3px solid #1F1F1F;
+    border-right: 3px solid #FFF7D1;
     padding-left: 20px;
     padding-right: 150px;
     padding: 26px;

@@ -37,6 +37,11 @@ public class Controller {
         return ResponseEntity.ok(articleService.getArtTitol(titol));
     }
 
+    @GetMapping("/getEmpreses")
+    public ResponseEntity<List<Articles>> obtenerEmpresas(){
+        return ResponseEntity.ok(articleService.getArtCat());
+    }
+
     @GetMapping("/categoria/{categoria}")
     public ResponseEntity<List<Articles>> getCategoria(@PathVariable("categoria") String categoria){
         return ResponseEntity.ok(articleService.getArticleCategoria(categoria));

@@ -42,6 +42,10 @@ public class ArticlesService {
         return articlesRepository.findBySubcategoriaIsNotNullAndSubcategoriaNot("");
     }
 
+    public List<Articles> getArtCat(){
+        return articlesRepository.findByCategoriaEmpresa();
+    }
+
     public Articles saveArticle(ArticlesDto articleDto) throws AttributeException {
         if(articlesRepository.existsByTitol(articleDto.getTitol())){
             throw new AttributeException("name already in use");

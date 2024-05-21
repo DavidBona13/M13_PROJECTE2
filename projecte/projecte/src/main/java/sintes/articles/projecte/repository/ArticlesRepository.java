@@ -28,4 +28,7 @@ public interface ArticlesRepository extends MongoRepository<Articles, Integer> {
 
     @Query("{categoria: '?0'}")
     List<Articles> findLatest20ArticlesByCategoriaOrderByFechaDesc(String categoria, Pageable pageable);
+
+    @Query("{'categoria': 'empresa'}")
+    List<Articles> findByCategoriaEmpresa();
 }

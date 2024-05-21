@@ -37,7 +37,7 @@ h1 {
 
 .contingut {
     display: flex;
-    width: 1265px;
+    width: 100%;
     height: 100%;
     background-color: #2D2B2D;
 }
