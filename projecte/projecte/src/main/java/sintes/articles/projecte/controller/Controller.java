@@ -42,6 +42,11 @@ public class Controller {
         return ResponseEntity.ok(articleService.getArticleCategoria(categoria));
     }
 
+    @GetMapping("/subcategoriaAll")
+    public List<Articles> getArticlesSubcategoria() {
+        return articleService.getArticlesWithNonEmptySubcategory();
+    }
+
     @GetMapping("/catisubcat/{categoria}/{subcategoria}")
     public ResponseEntity<List<Articles>> getcatISubcat(@PathVariable("categoria") String categoria,
                                                         @PathVariable ("subcategoria") String subcategoria){

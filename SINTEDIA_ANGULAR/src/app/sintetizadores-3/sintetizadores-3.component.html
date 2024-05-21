@@ -1,6 +1,6 @@
-<article *ngIf="articles?.titol" class="articleText">
-    <h2 id="titolR">{{ articles?.titol }}</h2>
-    <p id="txt1">{{ articles?.descripcio }}</p>
-  </article>
-  <p *ngIf="!articles?.titol">Loading...</p>
+<div *ngIf="articles?.titol" class="articleText">
+  <h2 id="titolR">{{ articles?.titol }}</h2>
+  <p id="txt1">{{ articles?.descripcio }}</p>
+</div>
+<p *ngIf="!articles?.titol">Loading...</p>
   

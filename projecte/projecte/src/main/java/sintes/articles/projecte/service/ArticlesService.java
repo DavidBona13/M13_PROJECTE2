@@ -38,12 +38,16 @@ public class ArticlesService {
         return articlesRepository.findByCategoria(categoria);
     }
 
+    public List<Articles> getArticlesWithNonEmptySubcategory() {
+        return articlesRepository.findBySubcategoriaIsNotNullAndSubcategoriaNot("");
+    }
+
     public Articles saveArticle(ArticlesDto articleDto) throws AttributeException {
         if(articlesRepository.existsByTitol(articleDto.getTitol())){
             throw new AttributeException("name already in use");
         }
         int id = autoIncrement();
-        Articles article = new Articles(id,  articleDto.getTitol(), articleDto.getDescripcio(), articleDto.getAutor(), articleDto.getDate(), articleDto.getCategoria(), articleDto.getSubcategoria(), articleDto.getImgURL());
+        Articles article = new Articles(id,  articleDto.getTitol(), articleDto.getDescripcio(), articleDto.getAutor(), articleDto.getDate(), articleDto.getCategoria(), articleDto.getSubcategoria(), articleDto.getImgURL(), articleDto.getImgSubcategoria());
         //Usuari usuari = usuariService.getUsuariById(dto.getUserId());
         return articlesRepository.save(article);
     }

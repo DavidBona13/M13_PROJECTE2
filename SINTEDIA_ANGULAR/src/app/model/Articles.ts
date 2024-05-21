@@ -8,8 +8,9 @@ export class Articles {
     subcategoria: string;
     id_user: number;
     imgURL: string;
+    imgSubcategoria: string;
 
-    constructor(id: number, titol: string, descripcio: string, autor: string, date: string, categoria: string, subcategoria: string, id_user: number, imgURL: string){
+    constructor(id: number, titol: string, descripcio: string, autor: string, date: string, categoria: string, subcategoria: string, id_user: number, imgURL: string, imgSubcategoria: string){
         this.id = id;
         this.titol = titol;
         this.descripcio = descripcio;
@@ -19,6 +20,7 @@ export class Articles {
         this.subcategoria = subcategoria;
         this.id_user = id_user;
         this.imgURL = imgURL;
+        this.imgSubcategoria = imgSubcategoria;
     }
 
 }

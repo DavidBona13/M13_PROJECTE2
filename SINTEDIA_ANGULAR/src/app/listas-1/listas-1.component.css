@@ -38,6 +38,12 @@ h1 {
 .contingut {
     display: flex;
     width: 1265px;
+    height: 150px;
+    background-color: #2D2B2D;
+}
+.listas {
+    display: inline;
+    width: 1265px;
     height: 100%;
     background-color: #2D2B2D;
 }

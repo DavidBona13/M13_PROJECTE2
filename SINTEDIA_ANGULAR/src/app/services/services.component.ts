@@ -14,6 +14,13 @@ export class ServicesComponent {
   private articleTitol = 'http://localhost:8080/articles/articleTitol';
   private subcategoriaURL = 'http://localhost:8080/articles/subcategoria';
 
+
+  //SERVICES LLISTES
+  private llistesURL = 'http://localhost:8080/listas/getAllLista';
+  private llistesId = 'http://localhost:8080/listas/GetById/';
+  private llistesAdd = 'http://localhost:8080/listas/addLlista';
+  private llistesAddArticle = 'http://localhost:8080/listas//addArtToList/';
+
   constructor(private httpClient: HttpClient){}
 
   public list(): Observable<Articles[]>{
