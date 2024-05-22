@@ -20,6 +20,7 @@ import { Listas1Component } from './listas-1/listas-1.component';
 import { Listas2Component } from './listas-2/listas-2.component';
 import { CodigoDeConductaComponent } from './codigo-de-conducta/codigo-de-conducta.component';
 import { Empresa1Component } from './empresa1/empresa1.component';
+import { Empreses2Component } from './empreses2/empreses2.component';
 
 @Component({  
   selector: 'app-root',
@@ -28,7 +29,7 @@ import { Empresa1Component } from './empresa1/empresa1.component';
   imports: [CommonModule, RouterOutlet, InicioComponent, HeaderComponent, FooterComponent, 
             IniciarSesionComponent, RegistroComponent, AcercaDeSintediaComponent, RouterLink, 
             SonidosComponent, Crear1Component, Listas1Component, CodigoDeConductaComponent, Sintetizadores2Component, Sintetizadores1Component,
-            Sintetizadores3Component, Empresa1Component],
+            Sintetizadores3Component, Empresa1Component, Empreses2Component, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

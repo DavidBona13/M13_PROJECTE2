@@ -14,12 +14,13 @@ import { ServicesURLService } from '../services-url.service';
   selector: 'app-empreses2',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule],
   templateUrl: './empreses2.component.html',
-  styleUrl: './empreses2.component.css'
+  styleUrl: './empreses2.component.css',
+  imports: [CommonModule]
 })
 export class Empreses2Component implements OnInit{
-  articles: Articles | undefined;
+  arti: Articles | undefined;
+  private unsubscribe$ = new Subject<void>(); 
 
   constructor(
     private articlesService: ServicesURLService,
@@ -40,9 +41,9 @@ export class Empreses2Component implements OnInit{
   getArticle(id: number): void {
     this.articlesService.artId(id).subscribe(
       (data: Articles) => {
-        this.articles = data;
-        console.log(this.articles);
-        console.log('Article data:', this.articles);
+        this.arti = data;
+        console.log(this.arti);
+        console.log('Article data:', this.arti);
       },
       error => {
         console.error('Error fetching article', error);

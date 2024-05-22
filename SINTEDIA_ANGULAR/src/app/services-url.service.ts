@@ -9,12 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ServicesURLService {
 
-  
+  //SERVICES ARTICLES
   private articleURL= 'http://localhost:8080/articles/latest20art'; 
   private articleURLid= 'http://localhost:8080/articles/articleId'; 
   private subcategoriaURL = 'http://localhost:8080/articles/subcategoria';
   private categoriaURL = 'http://localhost:8080/articles/getEmpreses';
   private articleTitol = 'http://localhost:8080/articles/articleTitol';
+  private deleteArt = 'http://localhost:8080/articles/deleteArticle'
 
  
 
@@ -47,6 +48,10 @@ export class ServicesURLService {
 
   public getSubcategorias(subcategoria: string): Observable<Articles[]>{
     return this.httpClient.get<Articles[]>(this.subcategoriaURL + `/${subcategoria}`);
+  }
+
+  public deleteArticle(id: number): Observable<Articles>{
+    return this.httpClient.delete<Articles>(this.deleteArt + `/${id}`);
   }
 
 
