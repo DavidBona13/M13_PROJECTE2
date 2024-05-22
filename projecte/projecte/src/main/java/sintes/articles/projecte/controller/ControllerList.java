@@ -60,6 +60,4 @@ public class ControllerList {
         String message = "La lista " + llista.getNomLlista() + " ha sido eliminado. ";
         return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
     }
-
-
 }

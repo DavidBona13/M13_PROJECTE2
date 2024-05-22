@@ -17,6 +17,7 @@ import { SonidosComponent } from './sonidos/sonidos.component';
 import { CodigoDeConductaComponent } from './codigo-de-conducta/codigo-de-conducta.component';
 import { ToastrModule } from 'ngx-toastr';
 import { Empresa1Component } from './empresa1/empresa1.component';
+import { Empreses2Component } from './empreses2/empreses2.component';
 
 
 export const routes: Routes = [
@@ -36,6 +37,7 @@ export const routes: Routes = [
     { path: 'conducta', component: CodigoDeConductaComponent},
     { path: 'acerca', component: AcercaDeSintediaComponent},
     { path: 'empreses1', component: Empresa1Component},
+    { path: 'empreses2/sintetizadores3/:id', component: Empreses2Component},
     { path: "**", redirectTo: '', pathMatch: 'full'}
 ];
 

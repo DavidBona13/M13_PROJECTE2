@@ -1,0 +1,9 @@
+<div *ngIf="articles?.titol" class="articleText">
+    <div class="titulo">
+      <h2 id="titolR">{{ articles?.titol }}</h2>
+      <img id="im1" src="{{articles?.imgURL}}">
+    </div>
+    <p id="txt1">{{ articles?.descripcio }}</p>
+</div>
+<p *ngIf="!articles?.titol" id="txtId">Loading...</p>
+    

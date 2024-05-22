@@ -1,0 +1,47 @@
+
+
+.articleText {
+    overflow-y: auto;
+    max-height: 4600px;
+    margin-top: 5px;
+    margin-left: 0px; 
+    width: 1255px;
+    height: 694px;
+}
+
+
+#prova {
+    width: 100px;
+    background-color: #FFF7D1;
+}
+
+#titolR {
+    color: #FFF7D1;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+#txt1 {
+    margin-top: 25px;
+    color: #FFF7D1;
+    margin-left: 100px;
+    margin-right: 175px;
+}
+
+#im1 {
+    width: 300px;
+    height: 175px;
+    margin-left: 50%; 
+    transform: translateX(-50%); 
+    margin-top: 50px;
+
+}
+
+.titulo {
+    display: flex;
+}
+
+#txtId {
+    position: center;
+    color: #FFF7D1;
+}
