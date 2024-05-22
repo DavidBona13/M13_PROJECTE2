@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { Sintetizadores3Component } from '../sintetizadores-3/sintetizadores-3.component';
 import { AppComponent } from '../app.component';
 import { ServicesURLService } from '../services-url.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -63,14 +64,35 @@ export class InicioComponent implements OnInit {
     }
     return text;
   }
-/*
-  toArticle(id: number | undefined): void {
-    if (id !== undefined) {
-      this.router.navigate(['/sintetizadores3', id]);
-    } else {
-      this.toast.error("Article ID is undefined", "Error", { timeOut: 3000, positionClass: "toast-top-center" });
-    }
-  }*/
 
+  eliminar(id: number): void {
+    Swal.fire({
+      title: "¿Estás seguro?",
+      text: "No podrás desacer",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Si, eliminar!",
+      cancelButtonText: "Cancelar"
+  }).then((result) => {
+    if(result.value) {
+      this.services.deleteArticle(id).subscribe(
+        () => {
+          Swal.fire(
+            'Deleted!',
+            'Your article has been deleted.',
+            'success'
+          ); })
+        
+      console.log('Artículo eliminado ' + id);
+
+    }else if(result.dismiss === Swal.DismissReason.cancel) {
+      Swal.fire(
+        'canceled',
+        'Artículo no eliminado',
+        'error'
+      )
+    }
+  });
+  }
   
 }

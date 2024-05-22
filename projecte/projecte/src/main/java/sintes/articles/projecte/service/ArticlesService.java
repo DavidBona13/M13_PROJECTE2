@@ -68,6 +68,7 @@ public class ArticlesService {
         article.setDate(articleDto.getDate());
         article.setCategoria(articleDto.getCategoria());
         article.setSubcategoria(articleDto.getSubcategoria());
+        article.setImgURL(articleDto.getImgURL());
         return articlesRepository.save(article);
     }
 

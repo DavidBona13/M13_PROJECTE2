@@ -37,7 +37,7 @@ export const routes: Routes = [
     { path: 'conducta', component: CodigoDeConductaComponent},
     { path: 'acerca', component: AcercaDeSintediaComponent},
     { path: 'empreses1', component: Empresa1Component},
-    { path: 'empreses2/sintetizadores3/:id', component: Empreses2Component},
+    { path: 'empreses2/:id', component: Empreses2Component},
     { path: "**", redirectTo: '', pathMatch: 'full'}
 ];
 
