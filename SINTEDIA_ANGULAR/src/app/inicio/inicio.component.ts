@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ServicesComponent } from '../services/services.component';
 import { Articles } from '../model/Articles';
 import { ToastrService } from 'ngx-toastr';
 import { Subject, throwError } from 'rxjs';
@@ -7,9 +6,10 @@ import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 import { Sintetizadores3Component } from '../sintetizadores-3/sintetizadores-3.component';
 import { AppComponent } from '../app.component';
+import { ServicesURLService } from '../services-url.service';
 
 
 @Component({
@@ -26,7 +26,7 @@ export class InicioComponent implements OnInit {
   private unsubscribe$ = new Subject<void>(); 
 
   constructor(
-    private servicesComponent: ServicesComponent,
+    private services: ServicesURLService,
     private toast: ToastrService,
     private router: Router
   ) { }
@@ -41,7 +41,7 @@ export class InicioComponent implements OnInit {
   }*/
 
  getArticles(): void {
-    this.servicesComponent.list()
+    this.services.list()
       .pipe(
         takeUntil(this.unsubscribe$)
       )

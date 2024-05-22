@@ -1,14 +1,13 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { Articles } from '../model/Articles';
-import { ServicesComponent } from '../services/services.component';
 import { ToastrService } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { Subject, throwError } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { InicioComponent } from '../inicio/inicio.component';
 import { AppComponent } from '../app.component';
-
+import { ServicesURLService } from '../services-url.service';
 
 @Component({
   selector: 'app-sintetizadores-3',
@@ -28,7 +27,7 @@ export class Sintetizadores3Component implements OnInit {
   private unsubscribe$ = new Subject<void>(); 
 
   constructor(
-    private articlesService: ServicesComponent,
+    private articlesService: ServicesURLService,
     private toast: ToastrService,
     private route : ActivatedRoute
   ) { }
