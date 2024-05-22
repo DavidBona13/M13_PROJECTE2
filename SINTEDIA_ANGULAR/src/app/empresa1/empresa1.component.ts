@@ -10,6 +10,7 @@ import { Sintetizadores3Component } from '../sintetizadores-3/sintetizadores-3.c
 import { AppComponent } from '../app.component';
 import { ServicesURLService } from '../services-url.service';
 import { HttpClient } from '@angular/common/http';
+import { Empreses2Component } from '../empreses2/empreses2.component';
 
 @Component({
   selector: 'app-empresa1',
@@ -17,7 +18,7 @@ import { HttpClient } from '@angular/common/http';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './empresa1.component.html',
   styleUrl: './empresa1.component.css',
-  imports: [RouterOutlet, RouterLink, Sintetizadores3Component, CommonModule]
+  imports: [RouterOutlet, RouterLink, Empreses2Component, CommonModule]
 })
 export class Empresa1Component implements OnInit{
 

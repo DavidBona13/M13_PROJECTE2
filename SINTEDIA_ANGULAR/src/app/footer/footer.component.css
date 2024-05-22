@@ -1,6 +1,6 @@
 .footer {
     margin-top: 0px;
-    height: 40px;
+    height: 100%;
     width: 100%;
     background-color: #1F1F1F;
     color: #FFF7D1;
@@ -10,18 +10,18 @@
 }
 
 .btnPri{
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 90px;
 
 }
 
 .btnAce {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 300px;
 }
 
 .btnCod{
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left:  300px;
 }
 
@@ -34,7 +34,7 @@
 
 .lofoFot {
     border-left: 3px solid #FFF7D1;
-    width: 100px;
+    width: 100%;
     height: 40px;
     margin-left: 10px;
 }
