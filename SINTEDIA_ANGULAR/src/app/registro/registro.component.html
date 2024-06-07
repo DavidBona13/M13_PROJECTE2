@@ -2,19 +2,21 @@
     <div class="letras">
         <h2 ID="titolR">REGISTRARSE:</h2>
         <h3 ID="txtUser">Usuario:</h3>
+        <h3 ID="txtMail">mail:</h3>
         <h3 ID="txtPass">Contraseña:</h3>
         <h3 ID="txtNewPass">Repite la contraseña:</h3>
-        <h3 ID="txtMail">mail:</h3>
     </div>
-    <div class="inputsRegister">
-        <input ID="inUser" type="text" placeholder="usuario">
-        <br>
-        <input ID="inPass" type="password" placeholder="PASSWORD">
-        <br>
-        <input ID="inPass2" type="password" placeholder="PASSWORD">
-        <br>
-        <input ID="inMail" type="text" placeholder="mail">
-        <br>
-        <button ID="btnRegister" type="button" onclick="">Registrarse</button>
-    </div>
+    <form (ngSubmit)="register()">
+        <div class="inputsRegister">
+            <input id="inUser" name="nom" type="text" [(ngModel)]="usuario.nom" placeholder="usuario" required>
+            <br>
+            <input id="inMail" name="mail" type="email" [(ngModel)]="usuario.email" placeholder="mail" required>
+            <br>
+            <input id="inPass" name="pwd" type="password" [(ngModel)]="usuario.pwd" placeholder="PASSWORD" required>
+            <br>
+            <input id="inPass2" name="pwd2" type="password" [(ngModel)]="pwd2" placeholder="PASSWORD" required>
+            <br>
+            <button id="btnRegister" type="submit" >Registrarse</button>
+        </div>
+    </form>
 </div>
