@@ -1,14 +1,16 @@
-<div class="contingut">
-    <div class="letras">
-        <h2 ID="titolR">INICIO DE SESIÓN:</h2>
-        <h3 ID="txtUser">Usuario:</h3>
-        <h3 ID="txtPass">Contraseña:</h3>
+<form (ngSubmit)="login()" class="contingut">
+    <div class="contingut">
+        <div class="letras">
+            <h2 id="titolR">INICIO DE SESIÓN:</h2>
+            <h3 id="txtUser">Usuario:</h3>
+            <h3 id="txtPass">Contraseña:</h3>
+        </div>
+        <div class="inputsRegister">
+            <input id="inUser" type="email" name="email" [(ngModel)]="email" placeholder="usuario">
+            <br>
+            <input id="inPass" type="password" name="pwd" [(ngModel)]="pwd" placeholder="PASSWORD">
+            <br>
+            <button id="btnRegister" type="submit">Iniciar Sesión</button>
+        </div>
     </div>
-    <div class="inputsRegister">
-        <input ID="inUser" type="text" placeholder="usuario">
-        <br>
-        <input ID="inPass" type="password" placeholder="PASSWORD">
-        <br>
-        <button ID="btnRegister" type="button" onclick="">Iniciar Sesión</button>
-    </div>
-</div>
+</form>

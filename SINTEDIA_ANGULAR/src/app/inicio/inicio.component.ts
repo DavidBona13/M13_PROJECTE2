@@ -68,7 +68,7 @@ export class InicioComponent implements OnInit {
   eliminar(id: number): void {
     Swal.fire({
       title: "¿Estás seguro?",
-      text: "No podrás desacer",
+      text: "No podrás deshacer",
       icon: "warning",
       showCancelButton: true,
       confirmButtonText: "Si, eliminar!",

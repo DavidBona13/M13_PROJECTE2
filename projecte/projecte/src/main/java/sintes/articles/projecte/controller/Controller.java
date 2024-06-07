@@ -6,11 +6,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import sintes.articles.projecte.bean.Articles;
+import sintes.articles.projecte.bean.LoginRequest;
+import sintes.articles.projecte.bean.Usuari;
 import sintes.articles.projecte.dto.ArticlesDto;
 import sintes.articles.projecte.dto.MessageDto;
+import sintes.articles.projecte.dto.UsuariDTO;
 import sintes.articles.projecte.exceptions.AttributeException;
 import sintes.articles.projecte.exceptions.ResourceNotFoundException;
 import sintes.articles.projecte.service.ArticlesService;
+import sintes.articles.projecte.service.UsuariService;
 
 import java.util.List;
 
@@ -21,6 +25,9 @@ public class Controller {
 
     @Autowired
     ArticlesService articleService;
+
+    @Autowired
+    UsuariService usuariService;
 
     @GetMapping("/obtenerArticulos")
     public ResponseEntity<List<Articles>> getAll() {
@@ -94,6 +101,40 @@ public class Controller {
         return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
     }
 
+    @GetMapping("/usuaris")
+    public ResponseEntity<List<Usuari>> getAllUsuaris(){
+        return ResponseEntity.ok(usuariService.getAllUsers());
+    }
+
+    @GetMapping("/usuarisId/{id}")
+    public ResponseEntity<Usuari> getUsuari(@PathVariable("id") int id) throws ResourceNotFoundException {
+        return ResponseEntity.ok(usuariService.getByIdUser(id));
+    }
+
+    @PostMapping("/insertarUser")
+    public ResponseEntity<MessageDto> saveUser(@Valid @RequestBody UsuariDTO user) throws AttributeException {
+        Usuari usuari = usuariService.saveUsuari(user);
+        String message = "El usuario " + usuari.getNom() + " ha sido añadido. ";
+        return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
+    }
+
+    @DeleteMapping("/deleteUser/{id}")
+    public ResponseEntity<MessageDto> deleteUser(@PathVariable("id") int id) throws ResourceNotFoundException {
+        Usuari usuari = usuariService.deleteUser(id);
+        String message = "El usuario " + usuari.getNom() + " ha sido eliminado. ";
+        return ResponseEntity.ok(new MessageDto(HttpStatus.OK, message));
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> iniciaSessio(@RequestBody LoginRequest loginRequest){
+        Usuari usuari= usuariService.findByEmail(loginRequest.getEmail());
+
+        if(usuari == null || !usuari.getPwd().equals(loginRequest.getPwd())){
+            return ResponseEntity.status(401).body(new MessageDto(HttpStatus.UNAUTHORIZED, "datos incorrectos"));
+        }
+
+        return ResponseEntity.ok(new MessageDto(HttpStatus.OK, "Inicio de sesión correcto"));
+    }
 
 }
 

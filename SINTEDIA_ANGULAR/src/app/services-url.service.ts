@@ -17,6 +17,9 @@ export class ServicesURLService {
   private articleTitol = 'http://localhost:8080/articles/articleTitol';
   private deleteArt = 'http://localhost:8080/articles/deleteArticle'
 
+ //SEVECIES USUARIS
+ private userAdd = 'http://localhost:8080/articles/insertarUser';
+ private userLogin = 'http://localhost:8080/articles/login';
  
 
 
@@ -37,7 +40,6 @@ export class ServicesURLService {
     return this.httpClient.get<Articles>(this.articleURLid + `/${id}`);
   }
   
-
   public artCategoria(): Observable<Articles[]> {
     return this.httpClient.get<Articles[]>(this.categoriaURL);
   }
@@ -52,6 +54,15 @@ export class ServicesURLService {
 
   public deleteArticle(id: number): Observable<Articles>{
     return this.httpClient.delete<Articles>(this.deleteArt + `/${id}`);
+  }
+
+  public addUser(user: any): Observable<any>{
+    return this.httpClient.post<any>(this.userAdd, user);
+  }
+
+  public iniciSesio(email: string, pwd: string): Observable<any> {
+    const loginRequest = { email, pwd };
+    return this.httpClient.post<any>(this.userLogin, loginRequest);
   }
 
 
