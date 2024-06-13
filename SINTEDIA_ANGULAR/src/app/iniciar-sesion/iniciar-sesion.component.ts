@@ -24,18 +24,16 @@ export class IniciarSesionComponent {
     private router: Router) {}
 
   login() {
-    this.services.iniciSesio(this.email, this.pwd).subscribe(
+    this.services.iniciSesio(this.email, this.pwd).subscribe( //classe servei, truca al mètode de iniciar sesió que es connecta amb el backend.
       response => {
         console.log('Login correcto', response);
-        // Guarda el token o maneja la sesión del usuario
-        this.toast.success('Inicio de sesión correcto', 'Registro Exitoso');
+        this.toast.success('Inicio de sesión correcto', 'Registro Exitoso'); //toast d'exit.
 
-        this.router.navigate(['']);
+        this.router.navigate(['']); //el botó navega a la pàgina inici (no té path).
       },
       error => {
-        console.error('Error al iniciar sesión', error);
-        // Muestra un mensaje de error
-        this.toast.error('Error al iniciar sesión', 'Error');
+        console.error('Error al iniciar sesión', error); 
+        this.toast.error('Error al iniciar sesión', 'Error'); //Si no inicia correctament, sortirà un toast.
       }
     );
   }

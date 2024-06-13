@@ -1,10 +1,11 @@
 .articles {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas con igual ancho */
-    gap: 0px; /* Espacio entre los elementos, ajusta según tu preferencia */
+    gap: 20px; /* Espacio entre los elementos, ajusta según tu preferencia */
     width: 100%; /* Ajusta el ancho total del contenedor según sea necesario */
     margin-top: 75px;
     margin-left: 75px;
+    margin-bottom: 50px; /* Ajusta este valor según el espacio que necesites */
 }
 
 .art1 {

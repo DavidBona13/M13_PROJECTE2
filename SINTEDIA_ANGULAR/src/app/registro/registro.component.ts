@@ -31,21 +31,19 @@ export class RegistroComponent {
 
   register() {
     if (this.usuario.pwd !== this.pwd2) {
-      this.toast.error('Las contraseñas no coinciden', 'Error de Registro');
-      return;
+      this.toast.error('Las contraseñas no coinciden', 'Error de Registro'); //toast error
+      return; //trenca el mètode
     }
     this.services.addUser(this.usuario).subscribe(
       response => {
-        console.log('Usuario registrado exitosamente', response);
-        // Redirige o muestra un mensaje de éxito
-        this.toast.success('Usuario registrado exitosamente', 'Registro Exitoso');
+        console.log('Usuario registrado exitosamente', response); //missatge terminal
+        this.toast.success('Usuario registrado exitosamente', 'Registro Exitoso'); //toast d'èxit
 
         this.router.navigate(['/iniciarSesion']); 
       },
       error => {
-        console.error('Error al registrar el usuario', error);
-        // Muestra un mensaje de error
-        this.toast.error('Error al registrar el usuario', 'Error');
+        console.error('Error al registrar el usuario', error); //missatge terminal
+        this.toast.error('Error al registrar el usuario', 'Error'); //toast d'error
       }
     );
   }
